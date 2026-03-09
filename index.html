@@ -1,0 +1,3174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método IMPERIVM™, Presença Digital Poderosa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+  <style>
+    /* ── RESET & BASE ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      overflow-x: hidden;
+      min-height: 100vh;
+      padding-top: 64px;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; background: none; border: none; font: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ── TYPOGRAPHY ───────────────────────────────── */
+    .font-syne { font-family: 'Syne', sans-serif; }
+    .font-mono { font-family: 'Space Mono', 'Courier New', monospace; }
+    .text-huge { font-size: clamp(3rem, 16vw, 24rem); }
+    .tracking-tighter { letter-spacing: -0.05em; }
+    .tracking-tight { letter-spacing: -0.025em; }
+    .tracking-widest { letter-spacing: 0.1em; }
+    .uppercase { text-transform: uppercase; }
+    .italic { font-style: italic; }
+    .leading-none { line-height: 1; }
+    .leading-relaxed { line-height: 1.625; }
+    .font-light { font-weight: 300; }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .font-black { font-weight: 900; }
+
+    /* ── COLORS ───────────────────────────────────── */
+    .text-white { color: #fff; }
+    .text-neutral-200 { color: #e5e5e5; }
+    .text-neutral-300 { color: #d4d4d4; }
+    .text-neutral-400 { color: #a3a3a3; }
+    .text-neutral-500 { color: #737373; }
+    .text-neutral-600 { color: #525252; }
+    .text-neutral-700 { color: #404040; }
+    .text-neutral-800 { color: #262626; }
+    .text-orange-400 { color: #fb923c; }
+    .text-orange-500 { color: #f97316; }
+    .text-white-90 { color: rgba(255,255,255,0.9); }
+
+    .bg-neutral-950 { background-color: #0a0a0a; }
+    .bg-neutral-900 { background-color: #171717; }
+    .bg-neutral-800 { background-color: #262626; }
+    .bg-neutral-700 { background-color: #404040; }
+    .bg-orange-500 { background-color: #f97316; }
+    .bg-transparent { background: transparent; }
+
+    /* ── LAYOUT ───────────────────────────────────── */
+    .w-full { width: 100%; }
+    .h-full { height: 100%; }
+    .min-h-screen { min-height: 100vh; }
+    .max-w-1920 { max-width: 1920px; }
+    .relative { position: relative; }
+    .absolute { position: absolute; }
+    .fixed { position: fixed; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .z-10 { z-index: 10; }
+    .z-20 { z-index: 20; }
+    .z-50 { z-index: 50; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-x-hidden { overflow-x: hidden; }
+    .pointer-events-none { pointer-events: none; }
+    .cursor-pointer { cursor: pointer; }
+
+    /* ── FLEX ─────────────────────────────────────── */
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .items-end { align-items: flex-end; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-end { justify-content: flex-end; }
+    .justify-start { justify-content: flex-start; }
+    .flex-1 { flex: 1 1 0%; }
+    .flex-grow { flex-grow: 1; }
+    .shrink-0 { flex-shrink: 0; }
+    .flex-auto { flex: 1 1 auto; }
+    .gap-1 { gap: 4px; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .gap-5 { gap: 20px; }
+    .gap-6 { gap: 24px; }
+    .gap-8 { gap: 32px; }
+    .gap-10 { gap: 40px; }
+    .gap-12 { gap: 48px; }
+    .gap-20 { gap: 80px; }
+
+    /* ── GRID ─────────────────────────────────────── */
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0,1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    /* ── SPACING ──────────────────────────────────── */
+    .p-2 { padding: 8px; }
+    .p-4 { padding: 16px; }
+    .p-5 { padding: 20px; }
+    .p-6 { padding: 24px; }
+    .p-8 { padding: 32px; }
+    .px-4 { padding-left: 16px; padding-right: 16px; }
+    .px-5 { padding-left: 20px; padding-right: 20px; }
+    .px-6 { padding-left: 24px; padding-right: 24px; }
+    .px-8 { padding-left: 32px; padding-right: 32px; }
+    .px-10 { padding-left: 40px; padding-right: 40px; }
+    .py-2 { padding-top: 8px; padding-bottom: 8px; }
+    .py-2\.5 { padding-top: 10px; padding-bottom: 10px; }
+    .py-4 { padding-top: 16px; padding-bottom: 16px; }
+    .py-5 { padding-top: 20px; padding-bottom: 20px; }
+    .py-6 { padding-top: 24px; padding-bottom: 24px; }
+    .py-8 { padding-top: 32px; padding-bottom: 32px; }
+    .py-10 { padding-top: 40px; padding-bottom: 40px; }
+    .pl-4 { padding-left: 16px; }
+    .pl-5 { padding-left: 20px; }
+    .pl-6 { padding-left: 24px; }
+    .pl-8 { padding-left: 32px; }
+    .pr-6 { padding-right: 24px; }
+    .pt-0\.5 { padding-top: 2px; }
+    .pt-6 { padding-top: 24px; }
+    .pt-8 { padding-top: 32px; }
+    .pb-6 { padding-bottom: 24px; }
+    .pb-8 { padding-bottom: 32px; }
+    .mb-1 { margin-bottom: 4px; }
+    .mb-2 { margin-bottom: 8px; }
+    .mb-3 { margin-bottom: 12px; }
+    .mb-4 { margin-bottom: 16px; }
+    .mb-5 { margin-bottom: 20px; }
+    .mb-6 { margin-bottom: 24px; }
+    .mb-8 { margin-bottom: 32px; }
+    .mb-10 { margin-bottom: 40px; }
+    .mb-12 { margin-bottom: 48px; }
+    .mt-auto { margin-top: auto; }
+    .mt-12 { margin-top: 48px; }
+    .mr-auto { margin-right: auto; }
+    .ml-auto { margin-left: auto; }
+    .mx-2 { margin-left: 8px; margin-right: 8px; }
+    .-mx-2 { margin-left: -8px; margin-right: -8px; }
+    .-mt-2 { margin-top: -8px; }
+
+    /* ── SIZING ───────────────────────────────────── */
+    .h-px { height: 1px; }
+    .h-1\.5 { height: 6px; }
+    .h-2 { height: 8px; }
+    .h-2\.5 { height: 10px; }
+    .h-3 { height: 12px; }
+    .h-3\.5 { height: 14px; }
+    .h-5 { height: 20px; }
+    .h-7 { height: 28px; }
+    .h-10 { height: 40px; }
+    .h-16 { height: 64px; }
+    .h-40 { height: 160px; }
+    .h-48 { height: 192px; }
+    .min-h-200 { min-height: 200px; }
+    .min-h-300 { min-height: 300px; }
+    .min-h-320 { min-height: 320px; }
+    .min-h-400 { min-height: 400px; }
+    .h-hero { height: 900px; max-height: 900px; }
+    .w-1 { width: 1px; }
+    .w-2 { width: 8px; }
+    .w-2\.5 { width: 10px; }
+    .w-3 { width: 12px; }
+    .w-7 { width: 28px; }
+    .w-10 { width: 40px; }
+    .w-24 { width: 96px; }
+    .w-48 { width: 192px; }
+    .w-max { width: max-content; }
+    .max-w-xs { max-width: 20rem; }
+    .max-w-sm { max-width: 24rem; }
+    .max-w-md { max-width: 28rem; }
+    .max-w-lg { max-width: 32rem; }
+    .max-w-2xl { max-width: 42rem; }
+    .max-w-65ch { max-width: 65ch; }
+    .max-w-200px { max-width: 200px; }
+    .w-full-third { width: 28%; }
+    .w-full-twothird { width: 72%; }
+    .w-full-60 { width: 60%; }
+    .w-full-40 { width: 40%; }
+
+    /* ── BORDERS ──────────────────────────────────── */
+    .border { border: 1px solid; }
+    .border-t { border-top: 1px solid; }
+    .border-b { border-bottom: 1px solid; }
+    .border-r { border-right: 1px solid; }
+    .border-l { border-left: 1px solid; }
+    .border-transparent { border-color: transparent; }
+    .border-white-5  { border-color: rgba(255,255,255,0.05); }
+    .border-white-8  { border-color: rgba(255,255,255,0.08); }
+    .border-white-10 { border-color: rgba(255,255,255,0.10); }
+    .border-orange-20 { border-color: rgba(249,115,22,0.20); }
+    .border-orange-30 { border-color: rgba(249,115,22,0.30); }
+    .border-orange-50 { border-color: rgba(249,115,22,0.50); }
+    .rounded-sm { border-radius: 2px; }
+    .rounded-md { border-radius: 6px; }
+    .rounded-lg { border-radius: 8px; }
+    .rounded-full { border-radius: 9999px; }
+    .rounded-xl { border-radius: 12px; }
+
+    /* ── SHADOWS ──────────────────────────────────── */
+    .shadow-lg  { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -4px rgba(0,0,0,0.3); }
+    .shadow-xl  { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4), 0 8px 10px -6px rgba(0,0,0,0.4); }
+    .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); }
+    .shadow-orange { box-shadow: 0 4px 24px rgba(249,115,22,0.08); }
+
+    /* ── BACKDROP ─────────────────────────────────── */
+    .backdrop-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+
+    /* ── TRANSITIONS ──────────────────────────────── */
+    .transition-all      { transition: all 0.15s ease; }
+    .transition-colors   { transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease; }
+    .transition-opacity  { transition: opacity 0.15s ease; }
+    .transition-transform{ transition: transform 0.15s ease; }
+    .duration-300 { transition-duration: 300ms; }
+    .duration-500 { transition-duration: 500ms; }
+    .duration-700 { transition-duration: 700ms; }
+
+    /* ── TRANSLATE ────────────────────────────────── */
+    .translate-x-1:hover { transform: translateX(4px); }
+    .-translate-x-1\/2 { transform: translateX(-50%); }
+    .-translate-y-1\/2 { transform: translateY(-50%); }
+    .center-abs { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+    /* ── SELECT ───────────────────────────────────── */
+    .select-none { user-select: none; }
+
+    /* ── ASPECT ───────────────────────────────────── */
+    .aspect-video { aspect-ratio: 16/9; }
+
+    /* ── OPACITY ──────────────────────────────────── */
+    .opacity-0  { opacity: 0; }
+    .opacity-40 { opacity: 0.4; }
+    .opacity-75 { opacity: 0.75; }
+    .opacity-90 { opacity: 0.9; }
+
+    /* ── WHITESPACE ───────────────────────────────── */
+    .whitespace-nowrap { white-space: nowrap; }
+
+    /* ── ROTATE ───────────────────────────────────── */
+    .rotate-45 { transform: rotate(45deg); }
+
+    /* ── MIX BLEND ────────────────────────────────── */
+    .mix-blend-overlay { mix-blend-mode: overlay; }
+    .mix-blend-screen  { mix-blend-mode: screen; }
+
+    /* ── DISPLAY ──────────────────────────────────── */
+    .block  { display: block; }
+    .hidden { display: none; }
+
+    /* ════════════════════════════════════════════════
+       SPECIFIC COMPONENT STYLES (replacing arbitrary Tailwind)
+    ════════════════════════════════════════════════ */
+
+    /* Header */
+    header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 50;
+      background: rgba(10,10,10,0.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08); height: 64px;
+    }
+    .header-inner {
+      display: flex; width: 100%; height: 100%; max-width: 1920px;
+      margin: 0 auto; padding: 0 24px; align-items: center; justify-content: space-between;
+    }
+    .header-logo { display: flex; align-items: center; gap: 12px; }
+    .header-logo:hover .logo-text { color: #f97316; }
+    .logo-mark { font-family: monospace; font-size: 10px; color: #f97316; letter-spacing: 0.1em; }
+    .logo-text { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.2s; }
+    .header-nav { display: none; gap: 40px; align-items: center; }
+    .header-nav a { font-size: 10px; font-weight: 700; color: #737373; text-transform: uppercase; letter-spacing: 0.2em; transition: color 0.2s; }
+    .header-nav a:hover { color: #fff; }
+    .header-cta { display: none; }
+
+
+    /* logo flicker on hover */
+    .header-logo:hover .logo-mark {
+      animation: text-flicker 1.5s ease-in-out infinite;
+      color: #fb923c;
+    }
+    .logo-mark { transition: color 0.2s; }
+
+
+    /* ── PERFORMANCE: GPU compositing ──────────────── */
+    .animate-beam, .animate-border-spin, .animate-marquee,
+    .animate-cursor, .hmv-core, .hmv-orbit-dot, .hmv-ring,
+    .sv-card-1, .sv-card-2, .sv-card-3, .sv-bar,
+    .problema-pulse, .problema-line, .problema-dot {
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    .cta-glow-orb, .service-bg {
+      will-change: transform, opacity;
+      transform: translateZ(0);
+    }
+    /* contain layout for heavy sections */
+    .section, .modules-section, .process-section, .cta-section, .service-section {
+      contain: layout style;
+    }
+    /* skip rendering of off-screen sections until scroll */
+    .section + .section, .modules-section, .process-section, #bonus, #servico {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
+    /* Reduce filter blur cost: use opacity instead where possible */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+
+    /* ── O PROBLEMA: signal animation ── */
+    @keyframes signal-pulse   { 0%,100%{opacity:0.15;transform:scaleX(0.3) translateZ(0)} 50%{opacity:1;transform:scaleX(1) translateZ(0)} }
+    @keyframes signal-rise    { 0%{opacity:0;transform:translateY(8px) translateZ(0)} 100%{opacity:1;transform:translateY(0) translateZ(0)} }
+    @keyframes noise-flicker  { 0%,100%{opacity:0.08} 25%{opacity:0.14} 50%{opacity:0.06} 75%{opacity:0.11} }
+    @keyframes dot-blink      { 0%,100%{opacity:0} 49%{opacity:0} 50%,99%{opacity:1} }
+    @keyframes scan-line      { 0%{transform:translateY(-100%) translateZ(0)} 100%{transform:translateY(900%) translateZ(0)} }
+    @keyframes counter-up     { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+    /* Beam animation */
+
+    @keyframes feed-scroll   { 0%{transform:translateY(0) translateZ(0)} 100%{transform:translateY(-50%) translateZ(0)} }
+    @keyframes pulse-dot     { 0%,100%{transform:scale(1) translateZ(0);opacity:1} 50%{transform:scale(1.6) translateZ(0);opacity:0.5} }
+    @keyframes count-pop     { 0%,100%{transform:scale(1) translateZ(0)} 40%{transform:scale(1.25) translateZ(0)} }
+    @keyframes bar-grow      { from{width:0} to{width:var(--w)} }
+    @keyframes wave-in       { 0%{opacity:0;transform:translateX(-12px) translateZ(0)} 100%{opacity:1;transform:translateX(0) translateZ(0)} }
+
+    @keyframes float-y { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes orbit   { from{transform:rotate(0deg) translateX(28px)} to{transform:rotate(360deg) translateX(28px)} }
+    @keyframes ping-ring { 0%{transform:scale(0.8);opacity:1} 100%{transform:scale(2.2);opacity:0} }
+    @keyframes slide-in-right { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
+    @keyframes bg-pan { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    @keyframes text-flicker { 0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:0.4} 94%{opacity:1} 97%{opacity:0.6} 98%{opacity:1} }
+    @keyframes beam-drop { 0%{transform:translateY(-100%)} 100%{transform:translateY(500%)} }
+    .animate-beam { animation: beam-drop 5s cubic-bezier(0.4,0,0.2,1) infinite; }
+
+    /* Border spin */
+    @keyframes border-spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    .animate-border-spin { animation: border-spin 2s linear infinite; }
+
+    /* Marquee */
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .animate-marquee { animation: marquee 40s linear infinite; }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    /* Reveal animation */
+    @keyframes fadeInUpBlur {
+      0%  { opacity:0; transform:translateY(20px); filter:blur(10px); }
+      100%{ opacity:1; transform:translateY(0);    filter:blur(0); }
+    }
+    .animate-in { animation: fadeInUpBlur 0.8s cubic-bezier(0.2,0.8,0.2,1) both; }
+    .reveal-hidden { opacity: 0; }
+
+    /* Cubes */
+    @keyframes cube-reveal-left  { 0%,100%{opacity:0;transform:translate(-15px,0) scale(0.98)} 15%{opacity:1;transform:translate(0,0) scale(1)} 60%{opacity:1;transform:translate(0,0) scale(1)} 75%{opacity:0;transform:translate(-15px,0) scale(0.98)} }
+    @keyframes cube-reveal-right { 0%,100%{opacity:0;transform:translate(15px,0) scale(0.98)} 15%{opacity:1;transform:translate(0,0) scale(1)} 60%{opacity:1;transform:translate(0,0) scale(1)} 75%{opacity:0;transform:translate(15px,0) scale(0.98)} }
+    @keyframes cube-reveal-bottom{ 0%,100%{opacity:0;transform:translate(0,15px) scale(0.98)} 15%{opacity:1;transform:translate(0,0) scale(1)} 60%{opacity:1;transform:translate(0,0) scale(1)} 75%{opacity:0;transform:translate(0,15px) scale(0.98)} }
+    .animate-cube-l { animation: cube-reveal-left   4s cubic-bezier(0.22,1,0.36,1) infinite; }
+    .animate-cube-r { animation: cube-reveal-right  4s cubic-bezier(0.22,1,0.36,1) infinite; animation-delay:160ms; }
+    .animate-cube-b { animation: cube-reveal-bottom 4s cubic-bezier(0.22,1,0.36,1) infinite; animation-delay:320ms; }
+
+    /* Wireframe */
+    @keyframes wireframe-loop { 0%{opacity:0;transform:translateY(10px) scale(0.98)} 8%,80%{opacity:1;transform:translateY(0) scale(1)} 90%,100%{opacity:0;transform:translateY(-5px) scale(0.98)} }
+    .animate-wireframe { opacity:0; animation:wireframe-loop 6s cubic-bezier(0.4,0,0.2,1) infinite; animation-fill-mode:both; }
+
+    /* Typing */
+    @keyframes type-loop-1 { 0%{width:0;animation-timing-function:steps(30,end);border-color:#f97316} 12%{width:100%;animation-timing-function:linear;border-color:transparent} 90%{width:100%} 100%{width:0} }
+    @keyframes type-loop-2 { 0%,15%{width:0;animation-timing-function:steps(35,end);border-color:#f97316} 27%{width:100%;animation-timing-function:linear;border-color:transparent} 90%{width:100%} 100%{width:0} }
+    @keyframes type-loop-3 { 0%,30%{width:0;animation-timing-function:steps(30,end);border-color:#f97316} 42%{width:100%;animation-timing-function:linear;border-color:transparent} 90%{width:100%} 100%{width:0} }
+    @keyframes type-loop-4 { 0%,45%{width:0;animation-timing-function:steps(20,end);border-color:#f97316} 55%{width:100%;animation-timing-function:linear;border-color:transparent} 90%{width:100%} 100%{width:0} }
+    @keyframes type-loop-5 { 0%,58%{width:0;animation-timing-function:steps(20,end);border-color:#f97316} 68%{width:100%;animation-timing-function:linear;border-color:transparent} 90%{width:100%} 100%{width:0} }
+    .typing-line { overflow:hidden; white-space:nowrap; width:0; border-right:2px solid transparent; will-change:width; }
+    .line-1 { animation:type-loop-1 8s infinite; }
+    .line-2 { animation:type-loop-2 8s infinite; }
+    .line-3 { animation:type-loop-3 8s infinite; }
+    .line-4 { animation:type-loop-4 8s infinite; }
+    .line-5 { animation:type-loop-5 8s infinite; }
+
+    /* Bar chart */
+    @keyframes barReveal { 0%{transform:scaleY(0);opacity:0} 15%{transform:scaleY(1);opacity:1} 85%{transform:scaleY(1);opacity:1} 100%{transform:scaleY(0);opacity:0} }
+    .animate-bar-reveal { animation:barReveal 6s cubic-bezier(0.22,1,0.36,1) infinite; transform-origin:bottom; }
+
+    /* Cursor */
+    @keyframes cursor-path { 0%,20%{top:7px;left:calc(100% - 28px)} 25%,45%{top:43px;left:calc(100% - 28px)} 50%,70%{top:79px;left:calc(100% - 28px)} 75%,95%{top:115px;left:calc(100% - 28px)} 100%{top:7px;left:calc(100% - 28px)} }
+    @keyframes cursor-click { 0%,8%,18%,29%,39%,49%,58%,68%,79%,89%,100%{transform:scale(1)} 4%,14%,34%,44%,54%,64%,74%,84%,94%{transform:scale(0.85)} }
+    .animate-cursor { animation: cursor-path 16s cubic-bezier(0.4,0,0.2,1) infinite, cursor-click 16s ease-in-out infinite; }
+
+    /* Toggles */
+    @keyframes toggle-state { 0%,5%{background-color:#262626;border-color:transparent} 6%,15%{background-color:rgba(249,115,22,0.2);border-color:rgba(249,115,22,0.5)} 16%,100%{background-color:#262626;border-color:transparent} }
+    @keyframes knob-slide   { 0%,5%{left:2px;background-color:#737373} 6%,15%{left:16px;background-color:#f97316} 16%,100%{left:2px;background-color:#737373} }
+    @keyframes text-active  { 0%,5%{color:#a3a3a3} 6%,15%{color:#ffffff} 16%,100%{color:#a3a3a3} }
+    @keyframes row-active   { 0%,20%{background-color:rgba(255,255,255,0.05)} 21%,100%{background-color:transparent} }
+    .item-1-row    { animation:row-active   16s step-end infinite; }
+    .item-1-text   { animation:text-active  16s linear   infinite; }
+    .item-1-toggle { animation:toggle-state 16s linear   infinite; }
+    .item-1-knob   { animation:knob-slide   16s cubic-bezier(0.4,0,0.2,1) infinite; }
+    .item-2-row    { animation:row-active   16s step-end infinite; animation-delay:4s; }
+    .item-2-text   { animation:text-active  16s linear   infinite; animation-delay:4s; }
+    .item-2-toggle { animation:toggle-state 16s linear   infinite; animation-delay:4s; }
+    .item-2-knob   { animation:knob-slide   16s cubic-bezier(0.4,0,0.2,1) infinite; animation-delay:4s; }
+    .item-3-row    { animation:row-active   16s step-end infinite; animation-delay:8s; }
+    .item-3-text   { animation:text-active  16s linear   infinite; animation-delay:8s; }
+    .item-3-toggle { animation:toggle-state 16s linear   infinite; animation-delay:8s; }
+    .item-3-knob   { animation:knob-slide   16s cubic-bezier(0.4,0,0.2,1) infinite; animation-delay:8s; }
+    .item-4-row    { animation:row-active   16s step-end infinite; animation-delay:12s; }
+    .item-4-text   { animation:text-active  16s linear   infinite; animation-delay:12s; }
+    .item-4-toggle { animation:toggle-state 16s linear   infinite; animation-delay:12s; }
+    .item-4-knob   { animation:knob-slide   16s cubic-bezier(0.4,0,0.2,1) infinite; animation-delay:12s; }
+
+    /* module visual keyframes */
+    @keyframes barFill { from{width:0;opacity:0} to{opacity:1} }
+    @keyframes pulseCell { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.06)} }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes hubPulse { 0%,100%{box-shadow:0 0 24px rgba(249,115,22,0.4)} 50%{box-shadow:0 0 44px rgba(249,115,22,0.75)} }
+
+    /* CTA button */
+    .cta-orange {
+      background: linear-gradient(135deg,#f97316,#ea580c);
+      color: #fff; font-family:'Syne',sans-serif; font-weight:700;
+      font-size:10px; text-transform:uppercase; letter-spacing:0.15em;
+      padding:10px 24px; border-radius:2px; border:none;
+      box-shadow:0 4px 24px rgba(249,115,22,0.35);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .cta-orange:hover { transform:translateY(-2px); box-shadow:0 8px 40px rgba(249,115,22,0.55); }
+
+    /* Secondary button (border spin effect) */
+    .btn-wrap {
+      position:relative; display:inline-flex; cursor:pointer;
+    }
+    .btn-spin {
+      position:absolute; inset:-1px; border-radius:6px;
+      background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 300deg, #f97316 360deg);
+      opacity:0; transition:opacity 0.3s; animation:border-spin 2s linear infinite;
+      filter:blur(0.5px);
+    }
+    .btn-wrap:hover .btn-spin { opacity:1; }
+    .btn-inner {
+      position:relative; background:#171717; border:1px solid rgba(249,115,22,0.2);
+      color:#d4d4d4; padding:10px 20px; border-radius:6px;
+      display:flex; align-items:center; gap:12px;
+      box-shadow:0 0 20px rgba(249,115,22,0.05);
+      transition:color 0.3s, border-color 0.3s;
+    }
+    .btn-wrap:hover .btn-inner { color:#fb923c; border-color:rgba(249,115,22,0.5); }
+    .btn-inner span { font-size:12px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; }
+    .btn-icon { color:#737373; transition:color 0.3s, transform 0.3s; }
+    .btn-wrap:hover .btn-icon { color:#fb923c; transform:translateX(4px); }
+    .btn-inner {
+      position: relative; overflow: hidden;
+    }
+    .btn-inner::after {
+      content:''; position:absolute; inset:0; border-radius:inherit;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.07) 50%, transparent 60%);
+      background-size: 200% 100%; background-position: 200% 0;
+      transition: background-position 0.5s ease;
+      pointer-events:none;
+    }
+    .btn-inner:hover::after { background-position: -200% 0; }
+
+    /* ── HERO ─────────────────────────────────────── */
+    .hero {
+      display:grid; grid-template-columns:repeat(1,1fr);
+      width:100%; position:relative;
+      height:900px; max-height:900px;
+    }
+    .hero-col {
+      display:flex; flex-direction:column;
+      padding:24px; position:relative; justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .hero-beam-line {
+      display:none; /* shown on md */
+      position:absolute; right:0; top:0; height:100%; width:1px;
+      background:rgba(255,255,255,0.08); overflow:hidden;
+    }
+    .hero-beam-fill {
+      position:absolute; top:0; left:0; width:100%; height:160px;
+      background:linear-gradient(to bottom, transparent, #f97316, transparent);
+    }
+    .corner-mark {
+      display:none; /* shown on md */
+      position:absolute; right:-4px; top:-5px;
+      color:rgba(255,255,255,0.25); font-size:12px; z-index:20;
+    }
+    .hero-text { margin-top:auto; margin-bottom:48px; max-width:20rem; }
+    .hero-title {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      width:100%; text-align:center; z-index:10;
+      pointer-events:none; display:none; /* shown on md */
+    }
+
+    /* grain overlay no hero */
+    .hero::after {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      opacity: 0.4;
+      z-index: 0;
+      mix-blend-mode: overlay;
+    }
+    /* mobile-only hero headline */
+    .hero-mobile-title { display:none; }
+    .hero-mid-visual { display: none; }
+
+
+    /* ── MOBILE (< 768px) ───────────────────────────── */
+    /* ══════════════════════════════════════════════════════
+       MOBILE — Full Responsive System (320px – 767px)
+       ══════════════════════════════════════════════════════ */
+
+    /* ── GLOBAL OVERFLOW GUARD ─────────────────────────── */
+    img, video, svg, canvas, iframe {
+      max-width: 100%;
+      height: auto;
+    }
+    /* ── END GUARD ──────────────────────────────────────── */
+
+    @media (max-width: 767px) {
+
+      /* 1 ─ GLOBAL: eliminate horizontal overflow */
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+      }
+      *, *::before, *::after { box-sizing: border-box !important; }
+
+      /* 2 ─ HEADER */
+      .header-inner {
+        padding: 0 12px 0 20px !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+      }
+      .header-logo { max-width: calc(100% - 56px) !important; flex-shrink: 0 !important; }
+      .header-nav  { display: none !important; }
+      .header-cta  { display: none !important; }
+      #mob-btn {
+        padding: 10px 12px !important;
+        min-width: 44px !important; min-height: 44px !important;
+        display: flex !important; align-items: center !important; justify-content: center !important;
+      }
+
+      /* 3 ─ MOBILE MENU */
+      .mobile-menu {
+        width: calc(100vw - 24px) !important;
+        max-width: 320px !important;
+        right: 0 !important;
+      }
+      .mobile-menu a {
+        padding: 14px 16px !important;
+        font-size: 15px !important;
+        min-height: 48px !important;
+        display: flex !important; align-items: center !important;
+      }
+
+      /* 4 ─ HERO */
+      .hero {
+        display: flex !important; flex-direction: column !important;
+        height: calc(100svh - 64px) !important;
+        min-height: 520px !important; max-height: none !important;
+        width: 100% !important; overflow: hidden !important;
+      }
+      .hero-col:nth-child(2),
+      .hero-col:nth-child(3),
+      .hero-col:nth-child(4) { display: none !important; }
+      .hero-col:first-child {
+        width: 100% !important; flex: 1 !important;
+        padding: 28px 20px 32px !important;
+        display: flex !important; flex-direction: column !important;
+        justify-content: space-between !important;
+        border-bottom: none !important; overflow: hidden !important;
+      }
+      .hero-title      { display: none !important; }
+      .hero-beam-line  { display: block !important; }
+
+      /* Hero mobile title */
+      .hero-mobile-title {
+        display: flex !important; flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important; overflow: hidden !important; flex-shrink: 0 !important;
+      }
+      .hero-mobile-title .mob-label {
+        font-size: 10px !important; color: #f97316 !important;
+        letter-spacing: 0.12em !important; text-transform: uppercase !important;
+        margin-bottom: 10px !important; white-space: nowrap !important;
+        opacity: 0;
+        animation: fadeInUpBlur 0.6s 0.1s cubic-bezier(0.2,0.8,0.2,1) forwards;
+      }
+      .hero-mobile-title .mob-name {
+        font-family: "Syne", sans-serif !important;
+        font-size: clamp(2.4rem, 12vw, 4.5rem) !important;
+        font-weight: 700 !important; color: #fff !important;
+        line-height: 0.9 !important; letter-spacing: -0.02em !important;
+        white-space: nowrap !important; display: block !important; width: auto !important;
+        opacity: 0;
+        animation: fadeInUpBlur 0.8s 0.25s cubic-bezier(0.2,0.8,0.2,1) forwards;
+      }
+      .hero-mobile-title::after {
+        content: ""; display: block !important;
+        width: 40px !important; height: 2px !important;
+        background: linear-gradient(to right, #f97316, transparent) !important;
+        margin-top: 14px !important; opacity: 0;
+        animation: fadeInUpBlur 0.6s 0.45s cubic-bezier(0.2,0.8,0.2,1) forwards;
+      }
+
+      /* Hero mid visual (orbital) */
+      .hero-mid-visual {
+        display: flex !important; flex-direction: column !important;
+        align-items: center !important; justify-content: center !important;
+        flex: 1 !important; position: relative !important; width: 100% !important;
+      }
+      .hmv-ring {
+        position: absolute !important; border-radius: 50% !important;
+        border: 1px solid rgba(249,115,22,0.25) !important;
+        animation: ping-ring 2.4s ease-out infinite !important;
+      }
+      .hmv-ring-1 { width: 90px !important; height: 90px !important; animation-delay: 0s !important; }
+      .hmv-ring-2 { width: 130px !important; height: 130px !important; animation-delay: 0.8s !important; border-color: rgba(249,115,22,0.12) !important; }
+      .hmv-core {
+        width: 52px !important; height: 52px !important; border-radius: 50% !important;
+        background: radial-gradient(circle at 35% 35%, #fb923c, #ea580c) !important;
+        box-shadow: 0 0 24px rgba(249,115,22,0.5), 0 0 48px rgba(249,115,22,0.2) !important;
+        animation: float-y 3s ease-in-out infinite !important;
+        position: relative !important; z-index: 2 !important;
+      }
+      .hmv-orbit-dot {
+        position: absolute !important; width: 8px !important; height: 8px !important;
+        border-radius: 50% !important; background: #f97316 !important;
+        animation: orbit 2.8s linear infinite !important; z-index: 3 !important;
+      }
+      .hmv-label {
+        position: absolute !important; bottom: 12px !important;
+        font-size: 9px !important; color: rgba(249,115,22,0.6) !important;
+        letter-spacing: 0.15em !important; text-transform: uppercase !important;
+        white-space: nowrap !important;
+      }
+
+      /* Hero body text */
+      .hero-text {
+        margin: 0 !important; z-index: 20 !important;
+        width: 100% !important; max-width: 100% !important; flex-shrink: 0 !important;
+      }
+      .hero-text p, .hero-text span {
+        font-size: 14px !important; line-height: 1.55 !important; max-width: 100% !important;
+        opacity: 0;
+        animation: fadeInUpBlur 0.7s 0.5s cubic-bezier(0.2,0.8,0.2,1) forwards;
+      }
+
+      /* 5 ─ MARQUEE */
+      .marquee-section { overflow: hidden !important; width: 100% !important; }
+      .marquee-track   { overflow: hidden !important; width: 100% !important; padding: 28px 0 !important; }
+      .marquee-inner   { gap: 40px !important; }
+      .animate-marquee { animation-duration: 14s !important; }
+      .marquee-item span { font-size: 14px !important; }
+      .marquee-fade-l, .marquee-fade-r { width: 40px !important; }
+
+      /* 6 ─ SECTION GRIDS */
+      .grid-4 { grid-template-columns: 1fr !important; width: 100% !important; }
+      .col-label {
+        grid-row: auto !important; grid-column: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        padding: 28px 20px !important; min-height: auto !important;
+      }
+      .col-3 {
+        grid-column: auto !important; border-left: none !important;
+        display: flex !important; flex-direction: column !important; width: 100% !important;
+      }
+      .col-3-full {
+        grid-column: auto !important; border-left: none !important; width: 100% !important;
+      }
+      .col-3 > * { border-right: none !important; }
+      /* Clamp inline 64px / 48px padding on .col-3-full children */
+      .col-3-full > div {
+        padding-left: 20px !important; padding-right: 20px !important;
+      }
+
+      /* 7 ─ STATS */
+      .stats-3col { grid-template-columns: 1fr !important; width: 100% !important; }
+      .stat-box {
+        min-height: auto !important; padding: 28px 20px !important;
+        border-right: none !important;
+        border-top: 1px solid rgba(255,255,255,0.08) !important; width: 100% !important;
+      }
+      .stat-num { font-size: clamp(3rem, 14vw, 5rem) !important; margin-bottom: 16px !important; }
+      .stat-box p { font-size: 14px !important; line-height: 1.65 !important; }
+
+      /* 8 ─ CARDS (4 Erros) */
+      .card {
+        min-height: auto !important; padding: 24px 20px !important;
+        border-right: none !important;
+      }
+      .card-visual {
+        aspect-ratio: auto !important;
+        min-height: 180px !important; height: 190px !important;
+        margin-bottom: 20px !important;
+      }
+      .card-num    { margin-bottom: 8px !important; }
+      .card-title  { font-size: 16px !important; }
+      .card-body   { font-size: 14px !important; line-height: 1.65 !important; }
+
+      /* 9 ─ MODULES */
+      .modules-grid { grid-template-columns: 1fr !important; }
+      .modules-label {
+        position: static !important; height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        padding: 28px 20px !important; min-height: auto !important;
+      }
+      .modules-list { grid-column: auto !important; border-left: none !important; }
+      .module-row {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important; padding: 24px 20px !important;
+      }
+      .module-title { font-size: 19px !important; }
+      .module-body  { font-size: 14px !important; line-height: 1.65 !important; max-width: 100% !important; }
+      .module-visual {
+        height: 200px !important; width: 100% !important;
+        display: flex !important; align-items: center !important; justify-content: center !important;
+      }
+      .module-visual--terminal {
+        align-items: stretch !important; justify-content: stretch !important;
+        padding: 0 !important; height: 220px !important;
+      }
+      .module-visual--terminal > * {
+        width: 100% !important; height: 100% !important;
+        position: absolute !important; inset: 0 !important;
+      }
+      .module-visual--terminal > div:last-child {
+        position: relative !important; display: flex !important; flex-direction: column !important;
+      }
+
+      /* 10 ─ BONUS / PROCESS */
+      .process-grid { grid-template-columns: 1fr !important; }
+      .process-label {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        padding: 28px 20px !important; min-height: auto !important;
+      }
+      .process-rows-wrap { grid-column: auto !important; border-left: none !important; }
+      .process-row  { grid-template-columns: 52px 1fr !important; }
+      .process-icon-col { padding: 20px 12px !important; }
+      .process-content  { padding: 20px 16px !important; }
+      .process-title { font-size: 16px !important; margin-bottom: 8px !important; }
+      .process-body  { font-size: 14px !important; line-height: 1.6 !important; max-width: 100% !important; }
+
+      /* 11 ─ BANNER */
+      .banner-grid     { grid-template-columns: 1fr !important; }
+      .banner-accent   { display: none !important; }
+      .banner-text-col { grid-column: auto !important; padding: 48px 20px !important; width: 100% !important; }
+      .banner-heading  { font-size: clamp(2rem, 9vw, 3.5rem) !important; }
+
+      /* 12 ─ CTA */
+      .cta-section {
+        padding: 72px 20px !important; overflow: hidden !important;
+      }
+      .cta-glow  { display: none !important; }
+      .cta-heading { font-size: clamp(2rem, 10vw, 3.5rem) !important; }
+      .cta-sub   { font-size: 15px !important; margin-bottom: 32px !important; }
+      /* Full-width CTA button on mobile */
+      .cta-section .btn-wrap { width: 100% !important; }
+      .cta-section .btn-inner {
+        width: 100% !important; justify-content: center !important;
+        padding: 14px 20px !important; min-height: 48px !important;
+      }
+
+      /* 13 ─ SERVICE */
+      .service-grid   { grid-template-columns: 1fr !important; }
+      .service-visual {
+        min-height: 300px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        border-right: none !important;
+      }
+      .service-copy   { padding: 32px 20px 40px !important; gap: 16px !important; }
+      .service-heading { font-size: clamp(1.8rem, 7vw, 2.5rem) !important; }
+      .service-body   { font-size: 14px !important; }
+      .service-list li { font-size: 14px !important; }
+      /* Service visual: stack cards */
+      .sv-card {
+        position: relative !important;
+        top: auto !important; left: auto !important;
+        bottom: auto !important; right: auto !important;
+        transform: none !important; width: 100% !important; animation: none !important;
+      }
+      .sv-card-1 { order: 1; }
+      .sv-card-2 { order: 2; }
+      .sv-card-3 { order: 3; padding: 12px 16px !important; flex-direction: row !important; gap: 10px !important; align-items: center !important; }
+
+      /* 14 ─ FOOTER */
+      .footer-grid { grid-template-columns: 1fr !important; }
+      .footer-brand {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        min-height: auto !important; padding: 28px 20px !important;
+      }
+      .footer-links {
+        grid-column: auto !important; border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        padding: 28px 20px !important; grid-template-columns: 1fr 1fr !important; gap: 24px !important;
+      }
+      .footer-newsletter { padding: 28px 20px !important; }
+      .footer-bottom {
+        flex-direction: column !important; gap: 8px !important;
+        text-align: center !important; padding: 20px !important;
+      }
+
+      /* 15 ─ BUTTONS — minimum 44px tap target */
+      .btn-inner  { min-height: 44px !important; padding: 12px 20px !important; }
+      .cta-orange { min-height: 44px !important; padding: 12px 20px !important; }
+
+      /* 16 ─ INLINE PADDING OVERRIDES (hard-coded values in HTML) */
+      [style*="padding:32px 64px"]   { padding: 28px 20px !important; }
+      [style*="padding: 32px 64px"]  { padding: 28px 20px !important; }
+      [style*="padding-left:64px"]   { padding-left:  20px !important; }
+      [style*="padding-right:64px"]  { padding-right: 20px !important; }
+      [style*="padding-left: 64px"]  { padding-left:  20px !important; }
+      [style*="padding-right: 64px"] { padding-right: 20px !important; }
+      [style*="padding-left:48px"]   { padding-left:  20px !important; }
+      [style*="padding-right:48px"]  { padding-right: 20px !important; }
+      [style*="padding-left: 48px"]  { padding-left:  20px !important; }
+      [style*="padding-right: 48px"] { padding-right: 20px !important; }
+
+      /* 17 ─ TYPOGRAPHY CLAMPS */
+      p[style*="font-size:13px"],
+      p[style*="font-size: 13px"]  { font-size: 14px !important; line-height: 1.65 !important; }
+      p[style*="font-size:17px"],
+      p[style*="font-size: 17px"]  { font-size: 15px !important; }
+      h2[style*="font-size:clamp"] { word-break: break-word !important; }
+      span[style*="font-size:8px"],
+      span[style*="font-size: 8px"] { font-size: 9px !important; }
+
+      /* 18 ─ LANG SWITCHER — mobile optimised */
+      #lang-switcher {
+        bottom: 16px !important; right: 16px !important;
+        padding: 5px 8px !important; gap: 5px !important;
+        border-radius: 10px !important;
+      }
+      .lang-btn {
+        width: 32px !important; height: 23px !important; min-width: 32px !important;
+        min-height: 23px !important;
+      }
+      .lang-divider { height: 14px !important; }
+
+    } /* ── end @media 767px ── */
+
+    /* ── EXTRA SMALL: 320px – 374px ── */
+    @media (max-width: 374px) {
+      .hero-mobile-title .mob-name { font-size: clamp(1.9rem, 10.5vw, 2.5rem) !important; }
+      .banner-heading  { font-size: 1.9rem !important; }
+      .cta-heading     { font-size: 1.9rem !important; }
+      .service-heading { font-size: 1.7rem !important; }
+      #lang-switcher   { bottom: 12px !important; right: 12px !important; padding: 4px 6px !important; }
+      .lang-btn        { width: 28px !important; height: 20px !important; }
+    }
+
+    /* ── END MOBILE ──────────────────────────────────── */
+
+    /* ── SECTIONS ─────────────────────────────────── */
+    .section { position:relative; z-index:20; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.08); }
+    .section-inner { width:100%; }
+
+    /* 4-col grid layout */
+    .grid-4 { display:grid; grid-template-columns:1fr; }
+    .col-label {
+      display:flex; flex-direction:column; padding:32px;
+      min-height:300px; justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .col-label p { font-size:13px; color:#a3a3a3; line-height:1.6; }
+    .col-3 { display:grid; grid-template-columns:1fr; }
+
+    /* stat box */
+    .stat-box {
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 280px;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .stat-box:hover { background: rgba(255,255,255,0.015); }
+    .stat-box:hover .stat-num { color: #fb923c; transition: color 0.3s; }
+    .stat-num { font-size:clamp(4rem,8vw,6rem); font-weight:500; color:#fff; letter-spacing:-0.05em; line-height:1; margin-bottom:24px; }
+
+    /* ── SERVICE CARDS ────────────────────────────── */
+    .card {
+      display:flex; flex-direction:column;
+      padding:32px; position:relative;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      transition:background 0.5s;
+    }
+    .card:hover { background:rgba(255,255,255,0.01); }
+    .card-visual {
+      aspect-ratio:16/9; overflow:hidden; display:flex; flex-direction:column;
+      background:rgba(23,23,23,0.4); width:100%;
+      border:1px solid rgba(255,255,255,0.08); margin-bottom:32px;
+      position:relative; align-items:center; justify-content:center;
+    }
+    .card-num { font-family:monospace; color:#f97316; font-size:11px; display:block; margin-bottom:12px; }
+    .card-title { font-size:18px; color:#fff; font-weight:500; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; }
+    .card-body  { color:#a3a3a3; font-size:13px; line-height:1.6; margin-bottom:24px; }
+    .card-link  { font-size:11px; color:#737373; display:flex; align-items:center; gap:8px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.05); margin-top:auto; transition:color 0.2s; }
+    .card:hover .card-link { color:#fff; }
+
+    /* Dot label */
+    .dot-label { position:absolute; top:20px; left:20px; z-index:20; display:flex; align-items:center; gap:8px; }
+    .dot { width:6px; height:6px; border-radius:50%; background:#f97316; }
+
+    /* ── MARQUEE SECTION ──────────────────────────── */
+    .marquee-section {
+      overflow:hidden; background:#0a0a0a;
+      border-top:1px solid rgba(255,255,255,0.08);
+      position:relative;
+    }
+    .marquee-track { display:flex; overflow:hidden; padding:40px 0; position:relative; align-items:center; }
+    .marquee-fade-l { position:absolute; left:0; top:0; bottom:0; width:96px; background:linear-gradient(to right,#0a0a0a,transparent); z-index:10; pointer-events:none; }
+    .marquee-fade-r { position:absolute; right:0; top:0; bottom:0; width:96px; background:linear-gradient(to left, #0a0a0a,transparent); z-index:10; pointer-events:none; }
+    .marquee-inner { display:flex; gap:80px; min-width:100%; }
+    .marquee-item { display:flex; align-items:center; gap:12px; opacity:0.4; transition:opacity 0.3s; flex-shrink:0; }
+    .marquee-item:hover { opacity:1; }
+    .marquee-item span { font-family:'Syne',sans-serif; font-size:18px; font-weight:600; color:#fff; letter-spacing:-0.025em; }
+
+    /* ── TEXT BANNER ──────────────────────────────── */
+    .banner-section { overflow:hidden; background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.08); position:relative; }
+    .banner-grid { display:grid; grid-template-columns:1fr; width:100%; }
+    .banner-accent { display:none; background:#111; position:relative; overflow:hidden; min-height:200px; }
+    .banner-text-col { display:flex; align-items:center; padding:80px 24px; }
+    .banner-heading { font-family:'Syne',sans-serif; font-weight:500; color:#fff; letter-spacing:-0.05em; line-height:1; }
+
+    /* ── PROCESS ROWS ─────────────────────────────── */
+    .process-section { background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.08); position:relative; z-index:20; }
+    .process-grid { display:grid; grid-template-columns:1fr; }
+    .process-label { display:flex; flex-direction:column; padding:32px; min-height:400px; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .process-rows { display:flex; flex-direction:column; }
+    .process-row {
+      display:grid; grid-template-columns:140px 1fr;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      transition:background 0.2s;
+    }
+    .process-row:last-child { border-bottom:none; }
+    .process-row:hover { background:rgba(255,255,255,0.01); }
+    .process-icon-col {
+      padding:32px; display:flex; flex-direction:column;
+      justify-content:space-between;
+      border-right:1px solid rgba(255,255,255,0.08);
+    }
+    .process-icon { width:40px; height:40px; display:flex; align-items:center; justify-content:center; color:#a3a3a3; transition:color 0.2s; }
+    .process-row:hover .process-icon { color:#f97316; }
+    .process-badge { font-family:monospace; font-size:11px; color:#404040; transition:color 0.2s; }
+    .process-row:hover .process-badge { color:rgba(249,115,22,0.5); }
+    .process-content { padding:32px; display:flex; flex-direction:column; justify-content:center; }
+    .process-title { font-size:20px; color:#fff; font-weight:500; letter-spacing:-0.025em; margin-bottom:12px; }
+    .process-body  { font-size:13px; color:#737373; line-height:1.6; max-width:65ch; }
+
+    /* ── MODULES ──────────────────────────────────── */
+    .modules-section { background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.08); z-index:20; position:relative; }
+    .modules-grid { display:grid; grid-template-columns:1fr; }
+    .modules-label { display:flex; flex-direction:column; padding:32px 48px; min-height:300px; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .modules-list { display:flex; flex-direction:column; }
+    .module-row {
+      display:grid; grid-template-columns:1fr;
+      gap:32px; padding:32px 48px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      transition:background 0.5s;
+    }
+    .module-row:last-child { border-bottom:none; }
+    .module-row:hover { background:rgba(249,115,22,0.03); border-left: 2px solid rgba(249,115,22,0.4); padding-left: calc(var(--module-pad,32px) - 2px); transition: all 0.2s ease; }
+    .module-tag { font-family:monospace; font-size:10px; color:#f97316; margin-bottom:16px; }
+    .module-title { font-family:'Syne',sans-serif; font-size:22px; color:#fff; font-weight:500; margin-bottom:16px; }
+    .module-body  { font-size:13px; color:#737373; line-height:1.6; max-width:28rem; }
+    .module-visual {
+      overflow:hidden; background:rgba(23,23,23,0.5); height:192px;
+      border:1px solid rgba(255,255,255,0.05); position:relative;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .module-visual-label { font-family:monospace; font-size:10px; color:#525252; text-transform:uppercase; letter-spacing:0.1em; }
+
+    /* ── CTA SECTION ──────────────────────────────── */
+    .cta-section::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background-image: linear-gradient(rgba(249,115,22,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(249,115,22,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      z-index: 0;
+    }
+    .cta-content { position:relative; z-index:1; }
+    .cta-section {
+      overflow:hidden; background:#0a0a0a;
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding:128px 24px; display:flex; align-items:center; justify-content:center;
+      position:relative;
+    }
+    .cta-glow {
+      position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none;
+    }
+    .cta-glow-orb {
+      width:40vw; height:40vw; max-width:600px; max-height:600px;
+      background:rgba(234,88,12,0.05); border-radius:50%; opacity:0.4;
+    }
+    .cta-content { position:relative; z-index:10; display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .cta-tag { font-family:monospace; font-size:10px; color:#f97316; text-transform:uppercase; letter-spacing:0.3em; display:block; margin-bottom:24px; }
+    .cta-heading { font-family:'Syne',sans-serif; font-weight:700; color:#fff; letter-spacing:-0.05em; line-height:0.9; margin-bottom:24px; }
+    .cta-sub { color:#a3a3a3; font-size:18px; max-width:32rem; margin-bottom:48px; line-height:1.625; }
+    .cta-note { font-family:monospace; font-size:10px; color:#525252; text-transform:uppercase; letter-spacing:0.1em; margin-top:20px; }
+
+    /* ── FOOTER ───────────────────────────────────── */
+    footer { background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.08); }
+    .footer-grid { display:grid; grid-template-columns:1fr; }
+    .footer-brand { padding:32px; display:flex; flex-direction:column; justify-content:space-between; min-height:300px; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .footer-links { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding:32px; }
+    .footer-col h4 { color:#fff; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:24px; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:16px; }
+    .footer-col a { color:#737373; font-size:13px; transition:color 0.2s; }
+    .footer-col a:hover { color:#fff; }
+    .footer-newsletter { padding:32px; border-top:1px solid rgba(255,255,255,0.08); }
+    .footer-newsletter h4 { color:#fff; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:24px; }
+    .footer-newsletter input {
+      width:100%; background:transparent;
+      border:none; border-bottom:1px solid rgba(255,255,255,0.2);
+      padding:8px 0; color:#fff; font-size:13px;
+      outline:none; transition:border-color 0.2s; margin-bottom:16px;
+    }
+    .footer-newsletter input:focus { border-color:#f97316; }
+    .footer-newsletter input::placeholder { color:#404040; }
+    .footer-newsletter button { font-size:11px; color:#a3a3a3; text-transform:uppercase; letter-spacing:0.1em; transition:color 0.2s; }
+    .footer-newsletter button:hover { color:#f97316; }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding:20px 32px; display:flex; flex-direction:column; gap:8px; align-items:center; justify-content:space-between; }
+    .footer-bottom span { color:#525252; font-size:11px; }
+
+    /* ── MOBILE MENU ──────────────────────────────── */
+    .mobile-menu { display:none; flex-direction:column; gap:4px; position:absolute; top:100%; right:0; margin-top:16px; width:192px; background:#171717; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px; box-shadow:0 25px 50px rgba(0,0,0,0.5); }
+    .mobile-menu a { display:block; padding:8px 16px; font-size:13px; color:#a3a3a3; border-radius:4px; transition:color 0.2s, background 0.2s; }
+    .mobile-menu a:hover { color:#fff; background:rgba(255,255,255,0.05); }
+    .mobile-menu.open { display:flex; }
+
+    /* ── GRID PATTERN ─────────────────────────────── */
+    .grid-pattern {
+      background-image: linear-gradient(rgba(249,115,22,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(249,115,22,0.04) 1px,transparent 1px);
+      background-size:30px 30px;
+    }
+    .dot-pattern {
+      background-image:radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+      background-size:28px 28px;
+      mask-image:radial-gradient(ellipse at center,black 45%,transparent 100%);
+      -webkit-mask-image:radial-gradient(ellipse at center,black 45%,transparent 100%);
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────── */
+    @media (min-width: 768px) {
+      .header-nav { display: flex; }
+      .header-cta { display: inline-flex; }
+      .hero { grid-template-columns: repeat(4, 1fr); }
+      .hero-col { padding:32px; border-bottom:none; }
+      .hero-beam-line { display:block; }
+      .corner-mark { display:block; }
+      .hero-title { display:block; }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .col-label { border-bottom:none; border-right:1px solid rgba(255,255,255,0.08); grid-row:span 2; }
+      .col-3 { grid-column:span 3; display:grid; grid-template-columns:repeat(2,1fr); border-left:1px solid rgba(255,255,255,0.08); }
+      .col-3-full { grid-column:span 3; border-left:1px solid rgba(255,255,255,0.08); }
+      /* col-label spans 2 rows so stat-boxes sit flush in the 3-col right area */
+      .col-label { grid-row: span 1; }
+      .card { border-right:1px solid rgba(255,255,255,0.08); }
+      .banner-grid { grid-template-columns: repeat(4,1fr); }
+      .banner-accent { display:block; }
+      .banner-text-col { grid-column:span 3; padding:128px 32px; }
+      .process-grid { grid-template-columns: repeat(4,1fr); }
+      .process-label { border-bottom:none; border-right:1px solid rgba(255,255,255,0.08); }
+      .process-rows-wrap { grid-column:span 3; border-left:1px solid rgba(255,255,255,0.08); }
+      .modules-grid { grid-template-columns: repeat(4,1fr); }
+      .modules-label { border-bottom:none; border-right:1px solid rgba(255,255,255,0.08); grid-column:span 1; position:sticky; top:0; height:600px; }
+      .modules-list { grid-column:span 3; border-left:1px solid rgba(255,255,255,0.08); }
+      .module-row { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns: repeat(4,1fr); }
+      .footer-brand { border-bottom:none; border-right:1px solid rgba(255,255,255,0.08); }
+      .footer-links { grid-column:span 2; border-right:1px solid rgba(255,255,255,0.08); }
+      .footer-newsletter { grid-column:span 1; }
+      .footer-bottom { flex-direction:row; }
+      /* service section desktop */
+      .service-grid { grid-template-columns: 1fr 1fr !important; }
+      .service-visual { min-height: 420px; border-bottom: none; border-right: 1px solid rgba(255,255,255,0.08); }
+      .service-copy { padding: 64px 48px; }
+      .hero-mid-visual { display: none !important; }
+    }
+
+
+
+    /* ── O PROBLEMA: visual ─────────────────────────── */
+    .problema-visual {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+      overflow: hidden; pointer-events: none;
+      display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .prob-scan {
+      position: absolute; left: 0; right: 0; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(249,115,22,0.5), transparent);
+      animation: scan-line 4s linear infinite;
+      z-index: 2;
+    }
+    .prob-bars {
+      display: flex; align-items: flex-end; gap: 4px;
+      padding: 0 24px 32px;
+      height: 100%;
+    }
+    .prob-bar {
+      flex: 1; border-radius: 2px 2px 0 0;
+      background: rgba(255,255,255,0.07);
+      transform-origin: bottom;
+      animation: signal-pulse ease-in-out infinite;
+      will-change: transform;
+    }
+    .prob-bar--hot {
+      background: linear-gradient(to top, rgba(249,115,22,0.6), rgba(249,115,22,0.2));
+      box-shadow: 0 0 8px rgba(249,115,22,0.2);
+    }
+    .prob-label {
+      position: absolute; bottom: 8px; left: 24px;
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Space Mono', monospace; font-size: 8px;
+      color: #525252; letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .prob-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: #f97316;
+      animation: dot-blink 1.2s step-end infinite;
+      flex-shrink: 0;
+    }
+    @media (max-width: 767px) {
+      .problema-visual {
+        position: relative !important;
+        height: 140px !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        display: flex !important;
+        margin-top: 8px;
+      }
+      .prob-bars { padding: 0 16px 24px !important; }
+      .prob-label { left: 16px !important; }
+    }
+    /* ── END O PROBLEMA ─────────────────────────────── */
+
+    /* ── SERVICE SECTION ──────────────────────────── */
+    .service-section {
+      position: relative; overflow: hidden;
+      background: #0a0a0a;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .service-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 70% at 10% 50%, rgba(249,115,22,0.06) 0%, transparent 70%);
+      animation: glow-sweep 5s ease-in-out infinite alternate;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    .service-visual {
+      position: relative; min-height: 280px;
+      display: flex; align-items: center; justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+    /* copy */
+    .service-copy {
+      padding: 48px 24px 56px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .service-tag {
+      font-family: 'Space Mono', monospace; font-size: 11px;
+      color: #f97316; letter-spacing: 0.2em; text-transform: uppercase;
+    }
+    .service-heading {
+      font-size: clamp(2rem,6vw,3.5rem);
+      font-weight: 500; color: #fff;
+      letter-spacing: -0.04em; line-height: 1.05;
+    }
+    .service-body {
+      font-size: 15px; color: #a3a3a3; line-height: 1.7; max-width: 42rem;
+    }
+    .service-list {
+      list-style: none; display: flex; flex-direction: column; gap: 12px;
+      padding: 0; margin: 0;
+    }
+    .service-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; color: #d4d4d4; line-height: 1.5;
+    }
+    .service-btn {
+      background: linear-gradient(135deg,#25d366,#128c7e) !important;
+      border-color: transparent !important;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3) !important;
+      gap: 8px !important;
+    }
+    @media (min-width: 768px) {
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .service-visual { min-height: 400px; border-bottom: none; border-right: 1px solid rgba(255,255,255,0.08); }
+      .service-copy { padding: 64px 48px; }
+    }
+    /* ── SERVICE LIVE VISUAL ──────────────────────── */
+    .sv-live {
+      flex-direction: column !important;
+      padding: 0 !important;
+      gap: 0 !important;
+      background: #0d0d0f !important;
+    }
+    .svl-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+      flex-shrink: 0;
+    }
+    .svl-avatar {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg,#f97316,#ea580c);
+      box-shadow: 0 0 12px rgba(249,115,22,0.3);
+      animation: pulse-dot 2.5s ease-in-out infinite;
+      will-change: transform;
+    }
+    .svl-live-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #f97316;
+      animation: pulse-dot 1.5s ease-in-out infinite;
+      flex-shrink: 0;
+      will-change: transform;
+    }
+    .svl-metrics {
+      display: flex; align-items: center;
+      padding: 16px 24px; gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      flex-shrink: 0;
+    }
+    .svl-metric { flex: 1; text-align: center; }
+    .svl-metric-num {
+      font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
+      color: #fff; letter-spacing: -0.03em;
+      animation: count-pop 3s ease-in-out infinite;
+      will-change: transform;
+    }
+    .svl-metric-lbl { font-family: monospace; font-size: 8px; color: #525252; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+    .svl-metric:nth-child(3) .svl-metric-num { animation-delay: 1s; }
+    .svl-metric:nth-child(5) .svl-metric-num { animation-delay: 2s; }
+    .svl-metric-divider { width: 1px; height: 32px; background: rgba(255,255,255,0.06); flex-shrink: 0; }
+    .svl-feed-wrap { flex: 1; overflow: hidden; position: relative; min-height: 0; }
+    .svl-feed-wrap::before, .svl-feed-wrap::after {
+      content: ''; position: absolute; left: 0; right: 0; height: 32px; z-index: 2; pointer-events: none;
+    }
+    .svl-feed-wrap::before { top: 0; background: linear-gradient(to bottom,#0d0d0f,transparent); }
+    .svl-feed-wrap::after  { bottom: 0; background: linear-gradient(to top,#0d0d0f,transparent); }
+    .svl-feed {
+      display: flex; flex-direction: column;
+      animation: feed-scroll 18s linear infinite;
+      will-change: transform;
+    }
+    .svl-feed:hover { animation-play-state: paused; }
+    .svl-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 24px;
+      font-size: 11px; color: #737373;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      flex-shrink: 0;
+    }
+    .svl-item b { color: #d4d4d4; font-weight: 500; }
+    .svl-item--hot { background: rgba(249,115,22,0.04); color: #a3a3a3; }
+    .svl-time { margin-left: auto; font-family: monospace; font-size: 8px; color: #404040; flex-shrink: 0; }
+    .svl-status {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.01);
+      flex-shrink: 0;
+    }
+    @media (max-width: 767px) {
+      .sv-live { min-height: 340px !important; position: relative !important; }
+      .svl-feed-wrap { min-height: 180px; }
+    }
+    /* sparkline */
+    .svl-sparkline {
+      width:100%; height:40px; flex-shrink:0;
+      border-bottom:1px solid rgba(255,255,255,0.04);
+    }
+    .svl-spark-line {
+      fill:none; stroke:rgba(249,115,22,0.7); stroke-width:1.5;
+      stroke-linecap:round; stroke-linejoin:round;
+      stroke-dasharray:300; stroke-dashoffset:300;
+      animation: svl-draw 2s ease-out 0.3s forwards;
+    }
+    .svl-spark-fill {
+      fill:rgba(249,115,22,0.08); stroke:none;
+      opacity:0; animation: svl-fade-in 0.5s ease 2s forwards;
+    }
+    .svl-spark-dot {
+      fill:#f97316;
+      opacity:0; animation: svl-fade-in 0.3s ease 2.2s forwards, bak-core-pulse 2s ease-in-out 2.2s infinite;
+    }
+    @keyframes svl-draw    { to { stroke-dashoffset:0; } }
+    @keyframes svl-fade-in { to { opacity:1; } }
+
+    /* progress bar */
+    .svl-progress { flex:1; height:3px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; margin-left:8px; }
+    .svl-progress-bar {
+      height:100%; width:0; border-radius:2px;
+      background:linear-gradient(to right,#ea580c,#f97316);
+      animation: svl-progress 8s linear infinite;
+      will-change:width;
+    }
+    @keyframes svl-progress { 0%{width:0} 90%{width:100%} 100%{width:100%} }
+
+        /* ── END SERVICE LIVE ──────────────────────────── */
+
+    /* ── END SERVICE ───────────────────────────────── */
+
+    /* ── "Presença com intenção" banner animations ── */
+    .banner-tag {
+      font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.2em;
+      text-transform:uppercase; color:#f97316; margin-bottom:24px;
+    }
+
+    /* kinetic banner accent */
+    .ba-kinetic { overflow:hidden; }
+
+    /* dot grid */
+    .bak-dots {
+      position:absolute; inset:0;
+      background-image: radial-gradient(circle, rgba(249,115,22,0.25) 1px, transparent 1px);
+      background-size: 24px 24px;
+      animation: bak-dots-drift 12s linear infinite;
+      will-change: transform;
+    }
+    @keyframes bak-dots-drift {
+      0%   { transform: translateY(0) translateZ(0); }
+      100% { transform: translateY(24px) translateZ(0); }
+    }
+
+    /* SVG traced lines */
+    .bak-lines {
+      position:absolute; inset:0; width:100%; height:100%;
+      pointer-events:none;
+    }
+    .bak-line {
+      stroke: rgba(249,115,22,0.35); stroke-width:0.5;
+      fill:none;
+      animation: bak-trace 2s ease-out forwards;
+      will-change: stroke-dashoffset;
+    }
+    .bak-line--dim { stroke: rgba(255,255,255,0.08); }
+    @keyframes bak-trace {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* orbe central */
+    .bak-center {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%,-50%);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .bak-ring {
+      position:absolute; border-radius:50%;
+      border:1px solid rgba(249,115,22,0.2);
+      will-change: transform, opacity;
+    }
+    .bak-ring-1 { width:60px;  height:60px;  animation: bak-ring-pulse 2.5s ease-in-out infinite; }
+    .bak-ring-2 { width:100px; height:100px; animation: bak-ring-pulse 2.5s ease-in-out 0.5s infinite; border-color:rgba(249,115,22,0.12); }
+    .bak-ring-3 { width:150px; height:150px; animation: bak-ring-pulse 2.5s ease-in-out 1s   infinite; border-color:rgba(249,115,22,0.06); }
+    @keyframes bak-ring-pulse {
+      0%,100% { transform:scale(1)    translateZ(0); opacity:0.6; }
+      50%     { transform:scale(1.08) translateZ(0); opacity:1;   }
+    }
+    .bak-core {
+      width:28px; height:28px; border-radius:50%;
+      background: radial-gradient(circle at 35% 35%, #fb923c, #ea580c);
+      box-shadow: 0 0 20px rgba(249,115,22,0.4);
+      animation: bak-core-pulse 2s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes bak-core-pulse {
+      0%,100% { transform:scale(1)    translateZ(0); box-shadow:0 0 20px rgba(249,115,22,0.4); }
+      50%     { transform:scale(1.15) translateZ(0); box-shadow:0 0 32px rgba(249,115,22,0.65); }
+    }
+    .bak-label {
+      position:absolute; top:calc(50% + 24px);
+      font-family:'Space Mono',monospace; font-size:7px;
+      color:rgba(249,115,22,0.5); letter-spacing:0.2em;
+      text-transform:uppercase; white-space:nowrap;
+    }
+
+    /* corner marks */
+    .bak-corner {
+      position:absolute; width:12px; height:12px;
+      border-color:rgba(249,115,22,0.3); border-style:solid;
+    }
+    .bak-corner--tl { top:16px;    left:16px;    border-width:1px 0 0 1px; }
+    .bak-corner--tr { top:16px;    right:16px;   border-width:1px 1px 0 0; }
+    .bak-corner--bl { bottom:16px; left:16px;    border-width:0 0 1px 1px; }
+    .bak-corner--br { bottom:16px; right:16px;   border-width:0 1px 1px 0; }
+
+    /* responsivo mobile */
+    @media (max-width:767px) { .ba-kinetic { display:none !important; } }
+
+    /* original diamond unused */
+    .accent-diamond { display:none; }
+    @keyframes diamond-pulse { 0%,100%{} }
+    .banner-word-1 { display:inline-block; }
+    .banner-word-2 { display:inline-block; }
+    .banner-word-3 { display:inline-block; }
+    /* staggered reveal applied via JS when the .reveal-hidden is removed */
+    .banner-heading .banner-word-1 { transition-delay:0ms; }
+    .banner-heading .banner-word-2 { transition-delay:120ms; }
+    .banner-heading .banner-word-3 { transition-delay:240ms; }
+
+    /* animated underline on hover */
+    .banner-heading:hover .banner-word-2 {
+      text-shadow:0 0 40px rgba(249,115,22,0.6);
+    }
+
+    /* orange glow sweep behind banner */
+    #presenca .banner-grid {
+      position:relative; overflow:hidden;
+    }
+    #presenca .banner-grid::before {
+      content:'';
+      position:absolute; inset:0;
+      background:radial-gradient(ellipse 60% 80% at 70% 50%, rgba(249,115,22,0.07) 0%, transparent 70%);
+      pointer-events:none;
+      animation:glow-sweep 4s ease-in-out infinite alternate;
+    }
+    @keyframes glow-sweep {
+      0%   { opacity:0.5; transform:translateX(-10%); }
+      100% { opacity:1;   transform:translateX(5%); }
+    }
+
+    /* ── selection ── */
+    ::selection { background:rgba(249,115,22,0.3); color:#fff; }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <div class="header-inner">
+    <a href="#hero" class="header-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <span class="logo-mark">///</span>
+      <span class="logo-text">IIMPERIVM</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#metodo" data-i18n="navMetodo">Método</a>
+      <a href="#modulos" data-i18n="navModulos">Módulos</a>
+      <a href="#bonus" data-i18n="navBonus">Bônus</a>
+      <a href="#garantia" data-i18n="navGarantia">Garantia</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:24px;">
+      <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="cta-orange header-cta" data-i18n="navCta">Quero Entrar</a>
+      <div style="position:relative;">
+        <button onclick="document.getElementById('mob-menu').classList.toggle('open')" style="color:#fff;padding:8px;display:flex;align-items:center;" id="mob-btn">
+          <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+        </button>
+        <div class="mobile-menu" id="mob-menu">
+          <a href="#metodo" onclick="document.getElementById('mob-menu').classList.remove('open')" data-i18n="navMetodo">Método</a>
+          <a href="#modulos" onclick="document.getElementById('mob-menu').classList.remove('open')" data-i18n="navModulos">Módulos</a>
+          <a href="#bonus" onclick="document.getElementById('mob-menu').classList.remove('open')" data-i18n="navBonus">Bônus</a>
+          <a href="#garantia" onclick="document.getElementById('mob-menu').classList.remove('open')" data-i18n="navGarantia">Garantia</a>
+          <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" onclick="document.getElementById('mob-menu').classList.remove('open')" style="color:#f97316;font-weight:700;" data-i18n="navCta">Quero Entrar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div class="hero" id="hero">
+  <!-- Col 1 -->
+  <div class="hero-col animate-in">
+    <div class="hero-beam-line">
+      <div class="hero-beam-fill animate-beam" style="opacity:0.75"></div>
+    </div>
+    <div class="corner-mark">+</div>
+    <!-- Mobile headline — hidden on desktop -->
+    <div class="hero-mobile-title">
+      <span class="mob-label" data-i18n="heroBadge">/// Método IMPERIVM™</span>
+      <div class="mob-name">IMPERIVM</div>
+    </div>
+
+    <!-- Mobile hero visual — hidden on desktop -->
+    <div class="hero-mid-visual">
+      <div class="hmv-ring hmv-ring-1"></div>
+      <div class="hmv-ring hmv-ring-2"></div>
+      <div class="hmv-core"></div>
+      <div class="hmv-orbit-dot"></div>
+      <div class="hmv-label" data-i18n="heroOrbitLabel">Autoridade · Posicionamento · IA</div>
+    </div>
+    <div class="hero-text">
+      <p style="font-size:17px;color:#d4d4d4;line-height:1.6;" class="animate-in">
+        <span data-i18n="heroSub">Do zero ao Instagram profissional, com design, estratégia e IA. Tudo em um método.</span>
+      </p>
+    </div>
+  </div>
+  <!-- Col 2 -->
+  <div class="hero-col animate-in">
+    <div class="hero-beam-line">
+      <div class="hero-beam-fill animate-beam" style="animation-delay:1.5s;opacity:0.75"></div>
+    </div>
+    <div class="corner-mark">+</div>
+  </div>
+  <!-- Col 3 -->
+  <div class="hero-col animate-in">
+    <div class="hero-beam-line">
+      <div class="hero-beam-fill animate-beam" style="animation-delay:3s;opacity:0.75"></div>
+    </div>
+    <div class="corner-mark">+</div>
+  </div>
+  <!-- Col 4 -->
+  <div class="hero-col" style="border-bottom:none;">
+    <div style="margin-top:auto;margin-bottom:48px;display:none;" id="hero-cta-wrap">
+      <div class="btn-wrap animate-in">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner">
+          <span data-i18n="heroCta">Quero Entrar</span>
+          <iconify-icon icon="solar:arrow-right-up-linear" width="18" height="18" class="btn-icon"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Big center title -->
+  <div class="hero-title">
+    <h1 class="text-huge font-syne font-medium animate-in reveal-hidden" style="color:#fff;letter-spacing:-0.05em;line-height:1;mix-blend-mode:overlay;opacity:0.9;">IMPERIVM</h1>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MARQUEE
+══════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-fade-l"></div>
+    <div class="marquee-fade-r"></div>
+    <div style="display:flex;gap:80px;min-width:100%;overflow:hidden;" class="animate-marquee">
+      <div style="display:flex;align-items:center;gap:80px;flex-shrink:0;">
+        <div class="marquee-item"><iconify-icon icon="solar:crown-star-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq1">Autoridade</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:target-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq2">Posicionamento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:cpu-bolt-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq3">Inteligência Artificial</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:chart-2-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq4">Crescimento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:diamond-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq5">Presença Digital</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:medal-star-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq6">Reconhecimento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:bolt-linear" width="28" style="color:#f97316"></iconify-icon><span data-i18n="mq7">Transformação</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:80px;flex-shrink:0;">
+        <div class="marquee-item"><iconify-icon icon="solar:crown-star-linear" width="28" style="color:#f97316"></iconify-icon><span>Autoridade</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:target-linear" width="28" style="color:#f97316"></iconify-icon><span>Posicionamento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:cpu-bolt-linear" width="28" style="color:#f97316"></iconify-icon><span>Inteligência Artificial</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:chart-2-linear" width="28" style="color:#f97316"></iconify-icon><span>Crescimento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:diamond-linear" width="28" style="color:#f97316"></iconify-icon><span>Presença Digital</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:medal-star-linear" width="28" style="color:#f97316"></iconify-icon><span>Reconhecimento</span></div>
+        <div class="marquee-item"><iconify-icon icon="solar:bolt-linear" width="28" style="color:#f97316"></iconify-icon><span>Transformação</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SOBRE / DORES
+══════════════════════════════════════ -->
+<section id="metodo" class="section">
+  <div class="grid-4">
+
+    <div class="col-label" style="grid-row:span 2;overflow:hidden;position:relative;">
+      <div style="position:relative;z-index:1;">
+        <span class="font-mono" style="font-size:11px;color:#525252;display:block;margin-bottom:4px;" data-i18n="metodoBadge">/// O Problema</span>
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(1.5rem,4vw,2.25rem);font-weight:500;color:#fff;letter-spacing:-0.05em;line-height:0.9;margin-bottom:24px;">IIMPERIVM</h2>
+      </div>
+
+      <!-- Signal / noise animation -->
+      <div class="problema-visual" aria-hidden="true">
+        <!-- scan line -->
+        <div class="prob-scan"></div>
+        <!-- signal bars -->
+        <div class="prob-bars">
+          <div class="prob-bar" style="animation-delay:0s;animation-duration:2.1s;height:18%;"></div>
+          <div class="prob-bar" style="animation-delay:0.3s;animation-duration:1.8s;height:35%;"></div>
+          <div class="prob-bar" style="animation-delay:0.1s;animation-duration:2.4s;height:22%;"></div>
+          <div class="prob-bar" style="animation-delay:0.5s;animation-duration:1.6s;height:55%;"></div>
+          <div class="prob-bar" style="animation-delay:0.2s;animation-duration:2.8s;height:28%;"></div>
+          <div class="prob-bar prob-bar--hot" style="animation-delay:0.7s;animation-duration:1.4s;height:80%;"></div>
+          <div class="prob-bar" style="animation-delay:0.4s;animation-duration:2.2s;height:42%;"></div>
+          <div class="prob-bar" style="animation-delay:0.9s;animation-duration:1.9s;height:30%;"></div>
+          <div class="prob-bar prob-bar--hot" style="animation-delay:0.6s;animation-duration:1.5s;height:70%;"></div>
+          <div class="prob-bar" style="animation-delay:0.8s;animation-duration:2.6s;height:20%;"></div>
+          <div class="prob-bar" style="animation-delay:1.1s;animation-duration:2.0s;height:45%;"></div>
+          <div class="prob-bar prob-bar--hot" style="animation-delay:1.3s;animation-duration:1.3s;height:90%;"></div>
+        </div>
+        <!-- label -->
+        <div class="prob-label">
+          <span class="prob-dot"></span>
+          <span data-i18n="problemLabel">SEM ESTRATÉGIA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- col-3-full: text + CTA + stats all in one 3-col block -->
+    <div class="col-3-full" style="display:flex;flex-direction:column;">
+
+      <!-- Top: headline + body + CTA -->
+      <div style="padding:32px 64px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(2rem,6vw,4.5rem);font-weight:500;color:#fff;letter-spacing:-0.05em;line-height:1;margin-bottom:40px;">
+          <span data-i18n="metodoHeadline">Seu Instagram poderia estar gerando clientes, oportunidades e reconhecimento agora.</span>
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:32px;">
+          <p class="reveal-hidden" style="font-size:17px;font-weight:300;line-height:1.6;color:#a3a3a3;max-width:42rem;">
+            <span data-i18n="metodoBody">Você posta. Você tenta. Mas sem método, cada esforço começa do zero. O IMPERIVM™ muda isso.</span>
+          </p>
+          <div class="btn-wrap reveal-hidden" style="flex-shrink:0;width:max-content;">
+            <div class="btn-spin animate-border-spin"></div>
+            <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner"><span data-i18n="metodoCta">Ver Solução</span><iconify-icon icon="solar:arrow-right-up-linear" width="18" class="btn-icon"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom: 3 stat boxes side-by-side -->
+      <div class="stats-3col" style="display:grid;grid-template-columns:repeat(3,1fr);">
+
+        <!-- Stat 1: 4 módulos -->
+        <div class="stat-box reveal-hidden" style="border-right:1px solid rgba(255,255,255,0.08);">
+          <div class="stat-num" data-target="4" data-prefix="" data-suffix="" data-duration="1200">0</div>
+          <p style="color:#a3a3a3;font-size:13px;line-height:1.6;" data-i18n="stat1Body">Módulos completos: perfil, design, conteúdo, IA e presença digital.</p>
+        </div>
+
+        <!-- Stat 2: 101 prompts -->
+        <div class="stat-box reveal-hidden" style="border-right:1px solid rgba(255,255,255,0.08);">
+          <div class="stat-num" data-target="101" data-prefix="" data-suffix="" data-duration="1800">0</div>
+          <p style="color:#a3a3a3;font-size:13px;line-height:1.6;" data-i18n="stat2Body">Prompts prontos para criar posts, Reels, legendas e roteiros com IA.</p>
+        </div>
+
+        <!-- Stat 3: 100 ferramentas — visual coerente com a página -->
+        <div class="stat-box reveal-hidden" style="position:relative;overflow:hidden;">
+          <!-- decorative grid bg -->
+          <div class="grid-pattern" style="position:absolute;inset:0;opacity:0.35;pointer-events:none;"></div>
+          <!-- subtle orange glow -->
+          <div style="position:absolute;bottom:-20px;right:-20px;width:120px;height:120px;background:rgba(249,115,22,0.08);filter:blur(40px);border-radius:50%;pointer-events:none;"></div>
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;height:100%;justify-content:flex-end;">
+            <div class="stat-num" data-target="100" data-prefix="+" data-suffix="" data-duration="1800">+0</div>
+            <p style="color:#a3a3a3;font-size:13px;line-height:1.6;" data-i18n="stat3Body">Ferramentas gratuitas de design, edição e automação já incluídas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     3 ERROS — service cards
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="grid-4">
+
+    <div class="col-label">
+      <div>
+        <span class="font-mono" style="font-size:11px;color:#525252;display:block;margin-bottom:16px;" data-i18n="errosBadge">/// Erros Críticos</span>
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:500;color:#fff;letter-spacing:-0.05em;line-height:1;margin-bottom:24px;" data-i18n="errosHeading">4 Erros que Bloqueiam Seu Crescimento</h2>
+        <p class="reveal-hidden" style="font-size:13px;color:#a3a3a3;line-height:1.6;margin-bottom:32px;" data-i18n="errosBody">Identifique o que está travando seu crescimento antes de continuar postando.</p>
+      </div>
+      <div class="btn-wrap reveal-hidden" style="width:max-content;">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner"><span style="font-size:11px;" data-i18n="errosCta">Evitar Agora</span><iconify-icon icon="solar:arrow-right-up-linear" width="16" class="btn-icon"></iconify-icon></a>
+      </div>
+    </div>
+
+    <div class="col-3" style="border-left:1px solid rgba(255,255,255,0.08);">
+
+      <!-- Error 1 — Orange Cube -->
+      <div class="card reveal-hidden">
+        <div class="card-visual">
+          <div style="position:absolute;inset:0;z-index:0;">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(249,115,22,0.06) 0%,transparent 55%);"></div>
+            <div class="dot-pattern" style="position:absolute;inset:0;opacity:0.18;"></div>
+            <div style="position:absolute;top:50%;left:50%;width:320px;height:320px;transform:translate(-50%,-50%);background:rgba(249,115,22,0.08);filter:blur(60px);border-radius:50%;"></div>
+          </div>
+          <div class="dot-label"><span class="dot"></span><span style="font-family:monospace;font-size:10px;letter-spacing:0.3em;color:#a3a3a3;text-transform:uppercase;">Erro 01</span></div>
+          <div style="position:relative;z-index:10;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 200 160" style="width:65%;max-width:480px;height:auto;filter:drop-shadow(0 40px 80px rgba(0,0,0,0.9));" aria-hidden="true">
+              <defs>
+                <linearGradient id="ot" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+                <linearGradient id="ol" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#9a3412"/></linearGradient>
+                <linearGradient id="or" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#7c2d12"/></linearGradient>
+                <radialGradient id="og" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.15"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+              </defs>
+              <g transform="translate(100,108)"><g class="animate-cube-b" style="opacity:0"><path d="M0,-14 L24,0 L0,14 L-24,0 Z" fill="rgba(115,115,115,0.35)"/><path d="M-24,0 L0,14 V40 L-24,26 Z" fill="rgba(20,20,20,0.85)"/><path d="M0,14 L24,0 V26 L0,40 Z" fill="rgba(10,10,10,0.9)"/></g></g>
+              <g transform="translate(56,82)"><g class="animate-cube-l" style="opacity:0"><path d="M0,-14 L24,0 L0,14 L-24,0 Z" fill="rgba(115,115,115,0.32)"/><path d="M-24,0 L0,14 V40 L-24,26 Z" fill="rgba(18,18,18,0.85)"/><path d="M0,14 L24,0 V26 L0,40 Z" fill="rgba(8,8,8,0.9)"/></g></g>
+              <g transform="translate(144,82)"><g class="animate-cube-r" style="opacity:0"><path d="M0,-14 L24,0 L0,14 L-24,0 Z" fill="rgba(115,115,115,0.32)"/><path d="M-24,0 L0,14 V40 L-24,26 Z" fill="rgba(18,18,18,0.85)"/><path d="M0,14 L24,0 V26 L0,40 Z" fill="rgba(8,8,8,0.9)"/></g></g>
+              <g transform="translate(100,56) scale(1.12)">
+                <circle cx="0" cy="18" r="38" fill="url(#og)"/>
+                <path d="M0,-14 L24,0 L0,14 L-24,0 Z" fill="url(#ot)"/>
+                <path d="M-24,0 L0,14 V40 L-24,26 Z" fill="url(#ol)"/>
+                <path d="M0,14 L24,0 V26 L0,40 Z" fill="url(#or)"/>
+                <path d="M-24,0 L0,-14 L24,0" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="0.6"/>
+                <path d="M-24,0 L0,14" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+                <path d="M24,0 L0,14" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+                <path d="M0,14 V40" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="0.6"/>
+              </g>
+            </svg>
+          </div>
+          <div style="position:absolute;bottom:20px;left:20px;right:20px;z-index:20;">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;">
+              <div>
+                <div class="font-syne" style="font-size:13px;color:rgba(255,255,255,0.9);" data-i18n="e1Caption">Postar sem Estratégia</div>
+                <div style="font-size:11px;color:#a3a3a3;" data-i18n="e1CaptionSub">Conteúdo aleatório não constrói audiência.</div>
+              </div>
+              <div style="font-family:monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.28em;color:#737373;white-space:nowrap;">IMPERIVM™</div>
+            </div>
+          </div>
+        </div>
+        <span class="card-num">01</span>
+        <h3 class="card-title reveal-hidden" data-i18n="e1Title">Postar sem Estratégia</h3>
+        <p class="card-body reveal-hidden" data-i18n="e1Body">Postar sem estratégia é trabalho perdido. Cada conteúdo precisa ter um papel claro: atrair, engajar ou converter.</p>
+        <div class="card-link" data-i18n="e1Link" data-i18n-suffix=' <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>'>Como Corrigir <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></div>
+      </div>
+
+      <!-- Error 2 — IA metrics dashboard visual -->
+      <div class="card reveal-hidden" style="border-right:none;">
+        <div class="card-visual" style="background:#0d0d0f;overflow:hidden;padding:0;align-items:stretch;justify-content:stretch;">
+
+          <!-- subtle glow -->
+          <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(249,115,22,0.06);filter:blur(60px);border-radius:50%;pointer-events:none;"></div>
+          <!-- dot grid bg -->
+          <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.06) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;"></div>
+
+          <!-- top bar -->
+          <div style="position:relative;z-index:2;width:100%;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#f97316;"></div>
+              <span style="font-family:monospace;font-size:10px;color:#525252;text-transform:uppercase;letter-spacing:0.2em;" data-i18n="iaDashboard">IA Dashboard</span>
+            </div>
+            <span style="font-family:monospace;font-size:9px;color:#404040;">IMPERIVM™</span>
+          </div>
+
+          <!-- metric rows -->
+          <div style="position:relative;z-index:2;display:flex;flex-direction:column;gap:0;flex:1;padding:16px 20px;justify-content:space-between;">
+
+            <!-- row 1 -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:4px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <iconify-icon icon="solar:cpu-bolt-linear" width="16" style="color:#f97316;"></iconify-icon>
+                <span style="font-size:11px;color:#d4d4d4;font-weight:500;" data-i18n="iaRow1">Conteúdo gerado com IA</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span style="font-size:13px;font-weight:700;color:#f97316;font-family:monospace;">10×</span>
+                <span style="font-size:9px;color:#525252;font-family:monospace;">↑</span>
+              </div>
+            </div>
+
+            <!-- row 2 -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:4px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <iconify-icon icon="solar:clock-circle-linear" width="16" style="color:#737373;"></iconify-icon>
+                <span style="font-size:11px;color:#737373;" data-i18n="iaRow2">Tempo de produção</span>
+              </div>
+              <span style="font-size:13px;font-weight:700;color:#737373;font-family:monospace;">−80%</span>
+            </div>
+
+            <!-- row 3 -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:4px;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <iconify-icon icon="solar:graph-up-linear" width="16" style="color:#737373;"></iconify-icon>
+                <span style="font-size:11px;color:#737373;" data-i18n="iaRow3">Consistência de posts</span>
+              </div>
+              <span style="font-size:13px;font-weight:700;color:#737373;font-family:monospace;">+300%</span>
+            </div>
+
+            <!-- progress bar -->
+            <div style="padding:10px 14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:4px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                <span style="font-size:10px;color:#525252;font-family:monospace;" data-i18n="iaBarLabel1">Produtividade sem IA</span>
+                <span style="font-size:10px;color:#525252;font-family:monospace;">12%</span>
+              </div>
+              <div style="width:100%;height:4px;background:rgba(255,255,255,0.06);border-radius:2px;">
+                <div style="width:12%;height:100%;background:#404040;border-radius:2px;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:10px;margin-bottom:8px;">
+                <span style="font-size:10px;color:#f97316;font-family:monospace;" data-i18n="iaBarLabel2">Com IMPERIVM™ + IA</span>
+                <span style="font-size:10px;color:#f97316;font-family:monospace;">94%</span>
+              </div>
+              <div style="width:100%;height:4px;background:rgba(249,115,22,0.15);border-radius:2px;">
+                <div style="width:94%;height:100%;background:linear-gradient(90deg,#f97316,#fb923c);border-radius:2px;box-shadow:0 0 8px rgba(249,115,22,0.4);"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <span class="card-num">02</span>
+        <h3 class="card-title reveal-hidden" data-i18n="e2Title">Ignorar a IA</h3>
+        <p class="card-body reveal-hidden" data-i18n="e2Body">Quem não usa IA produz menos e gasta mais tempo. O IMPERIVM™ inclui tudo para você criar 10× mais rápido.</p>
+        <div class="card-link">Como Corrigir <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></div>
+      </div>
+
+      <!-- Error 3 — Authority pyramid visual -->
+      <div class="card reveal-hidden">
+        <div class="card-visual" style="background:#0d0d0f;overflow:hidden;padding:0;flex-direction:column;align-items:stretch;justify-content:stretch;">
+
+          <!-- glow -->
+          <div style="position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:180px;height:100px;background:rgba(249,115,22,0.08);filter:blur(50px);border-radius:50%;pointer-events:none;"></div>
+          <!-- grid bg -->
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;"></div>
+
+          <!-- top bar -->
+          <div style="position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#f97316;"></div>
+              <span style="font-family:monospace;font-size:10px;color:#525252;text-transform:uppercase;letter-spacing:0.2em;" data-i18n="pyramidLabel">Pirâmide de Autoridade</span>
+            </div>
+            <span style="font-family:monospace;font-size:9px;color:#404040;">IMPERIVM™</span>
+          </div>
+
+          <!-- pyramid levels -->
+          <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:20px 24px 24px;gap:4px;">
+
+            <!-- level 1 — top: Referência -->
+            <div style="width:38%;padding:7px 0;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:2px;display:flex;flex-direction:column;align-items:center;gap:2px;box-shadow:0 0 20px rgba(249,115,22,0.35);">
+              <iconify-icon icon="solar:crown-star-bold" width="14" style="color:#fff;"></iconify-icon>
+              <span style="font-family:monospace;font-size:9px;color:#fff;text-transform:uppercase;letter-spacing:0.15em;font-weight:700;" data-i18n="pyramidLevel1">Referência</span>
+            </div>
+
+            <!-- level 2 -->
+            <div style="width:58%;padding:8px 0;background:rgba(249,115,22,0.18);border:1px solid rgba(249,115,22,0.35);border-radius:2px;display:flex;align-items:center;justify-content:center;gap:6px;">
+              <iconify-icon icon="solar:medal-star-linear" width="13" style="color:#f97316;"></iconify-icon>
+              <span style="font-family:monospace;font-size:9px;color:#fb923c;text-transform:uppercase;letter-spacing:0.12em;" data-i18n="pyramidLevel2">Autoridade</span>
+            </div>
+
+            <!-- level 3 -->
+            <div style="width:76%;padding:8px 0;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.15);border-radius:2px;display:flex;align-items:center;justify-content:center;gap:6px;">
+              <iconify-icon icon="solar:target-linear" width="13" style="color:#737373;"></iconify-icon>
+              <span style="font-family:monospace;font-size:9px;color:#737373;text-transform:uppercase;letter-spacing:0.12em;" data-i18n="pyramidLevel3">Posicionamento</span>
+            </div>
+
+            <!-- level 4 — base -->
+            <div style="width:94%;padding:8px 0;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:2px;display:flex;align-items:center;justify-content:center;gap:6px;">
+              <iconify-icon icon="solar:user-linear" width="13" style="color:#525252;"></iconify-icon>
+              <span style="font-family:monospace;font-size:9px;color:#525252;text-transform:uppercase;letter-spacing:0.12em;" data-i18n="pyramidLevel4">Perfil Anônimo</span>
+            </div>
+
+            <!-- label -->
+            <div style="margin-top:12px;display:flex;align-items:center;gap:6px;">
+              <div style="width:20px;height:1px;background:rgba(249,115,22,0.4);"></div>
+              <span style="font-family:monospace;font-size:9px;color:#525252;letter-spacing:0.15em;">MÉTODO IMPERIVM™</span>
+              <div style="width:20px;height:1px;background:rgba(249,115,22,0.4);"></div>
+            </div>
+
+          </div>
+        </div>
+        <span class="card-num">03</span>
+        <h3 class="card-title reveal-hidden" data-i18n="e3Title">Sem Autoridade</h3>
+        <p class="card-body reveal-hidden" data-i18n="e3Body">Seguidores sem autoridade não viram clientes. Você precisa ser reconhecido como referência, e o método ensina exatamente isso.</p>
+        <div class="card-link">Como Construir <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></div>
+      </div>
+
+      <!-- Error 4 — Bar chart -->
+      <div class="card reveal-hidden" style="border-right:none;">
+        <div class="card-visual" style="background:rgba(23,23,23,0.5);">
+          <div style="position:absolute;top:50%;left:25%;transform:translateY(-50%);width:160px;height:160px;background:rgba(249,115,22,0.04);filter:blur(50px);border-radius:50%;pointer-events:none;"></div>
+          <!-- Chart left -->
+          <div style="display:flex;flex-direction:column;width:60%;height:100%;border-right:1px solid rgba(255,255,255,0.05);padding:20px;">
+            <div style="display:flex;gap:16px;margin-bottom:8px;">
+              <div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:1px;background:#404040;"></div><span style="font-family:monospace;font-size:9px;color:#737373;text-transform:uppercase;" data-i18n="chartNoMethod">Sem Método</span></div>
+              <div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:1px;background:#f97316;"></div><span style="font-family:monospace;font-size:9px;color:#737373;text-transform:uppercase;" data-i18n="chartWithMethod">Com IMPERIVM™</span></div>
+            </div>
+            <div style="flex:1;position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:16px 4px;">
+              <div style="position:absolute;inset:16px 0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;opacity:0.15;">
+                <div style="border-top:1px dashed rgba(255,255,255,0.15);width:100%;"></div>
+                <div style="border-top:1px dashed rgba(255,255,255,0.15);width:100%;"></div>
+                <div style="border-top:1px dashed rgba(255,255,255,0.15);width:100%;"></div>
+              </div>
+              <div style="flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative;">
+                <div class="animate-bar-reveal" style="width:100%;display:flex;flex-direction:column;gap:1px;height:25%;animation-delay:0ms;">
+                  <div style="width:100%;background:#404040;border-radius:1px 1px 0 0;flex:1;"></div>
+                </div>
+                <span style="position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:monospace;font-size:9px;color:#525252;">Jan</span>
+              </div>
+              <div style="flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative;">
+                <div class="animate-bar-reveal" style="width:100%;display:flex;flex-direction:column;gap:1px;height:55%;animation-delay:100ms;">
+                  <div style="width:100%;background:#f97316;border-radius:1px 1px 0 0;flex:1.5;"></div>
+                  <div style="width:100%;background:#404040;flex:0.7;"></div>
+                </div>
+                <span style="position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:monospace;font-size:9px;color:#525252;">Fev</span>
+              </div>
+              <div style="flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative;">
+                <div class="animate-bar-reveal" style="width:100%;display:flex;flex-direction:column;gap:1px;height:72%;animation-delay:200ms;">
+                  <div style="width:100%;background:#f97316;border-radius:1px 1px 0 0;flex:2;"></div>
+                  <div style="width:100%;background:#404040;flex:0.7;"></div>
+                </div>
+                <span style="position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:monospace;font-size:9px;color:#525252;">Mar</span>
+              </div>
+              <div style="flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;position:relative;">
+                <div class="animate-bar-reveal" style="width:100%;display:flex;flex-direction:column;gap:1px;height:92%;animation-delay:300ms;">
+                  <div style="width:100%;background:#f97316;border-radius:1px 1px 0 0;flex:2.5;"></div>
+                  <div style="width:100%;background:#404040;flex:0.6;"></div>
+                </div>
+                <span style="position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:monospace;font-size:9px;color:#525252;">Abr</span>
+              </div>
+            </div>
+          </div>
+          <!-- Toggles right -->
+          <div style="width:40%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px;background:rgba(10,10,10,0.3);">
+            <div style="display:flex;flex-direction:column;gap:14px;position:relative;">
+              <div class="animate-cursor" style="position:absolute;z-index:50;pointer-events:none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5.5 3.5L11.5 19.5L14.5 12.5L21.5 12.5L5.5 3.5Z" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="item-1-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;margin:0 -8px;border-radius:4px;border:1px solid transparent;">
+                <span class="item-1-text" style="font-size:10px;font-weight:500;color:#a3a3a3;font-family:monospace;" data-i18n="toggleEngagement">Engajamento</span>
+                <div class="item-1-toggle" style="width:28px;height:14px;background:#262626;border-radius:9999px;position:relative;border:1px solid transparent;">
+                  <div class="item-1-knob" style="position:absolute;left:2px;top:2px;width:10px;height:10px;background:#737373;border-radius:50%;"></div>
+                </div>
+              </div>
+              <div class="item-2-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;margin:0 -8px;border-radius:4px;border:1px solid transparent;">
+                <span class="item-2-text" style="font-size:10px;font-weight:500;color:#a3a3a3;font-family:monospace;" data-i18n="toggleAuthority">Autoridade</span>
+                <div class="item-2-toggle" style="width:28px;height:14px;background:#262626;border-radius:9999px;position:relative;border:1px solid transparent;">
+                  <div class="item-2-knob" style="position:absolute;left:2px;top:2px;width:10px;height:10px;background:#737373;border-radius:50%;"></div>
+                </div>
+              </div>
+              <div class="item-3-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;margin:0 -8px;border-radius:4px;border:1px solid transparent;">
+                <span class="item-3-text" style="font-size:10px;font-weight:500;color:#a3a3a3;font-family:monospace;" data-i18n="toggleOpportunities">Oportunidades</span>
+                <div class="item-3-toggle" style="width:28px;height:14px;background:#262626;border-radius:9999px;position:relative;border:1px solid transparent;">
+                  <div class="item-3-knob" style="position:absolute;left:2px;top:2px;width:10px;height:10px;background:#737373;border-radius:50%;"></div>
+                </div>
+              </div>
+              <div class="item-4-row" style="display:flex;align-items:center;justify-content:space-between;padding:4px 8px;margin:0 -8px;border-radius:4px;border:1px solid transparent;">
+                <span class="item-4-text" style="font-size:10px;font-weight:500;color:#a3a3a3;font-family:monospace;" data-i18n="toggleGrowth">Crescimento</span>
+                <div class="item-4-toggle" style="width:28px;height:14px;background:#262626;border-radius:9999px;position:relative;border:1px solid transparent;">
+                  <div class="item-4-knob" style="position:absolute;left:2px;top:2px;width:10px;height:10px;background:#737373;border-radius:50%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="card-num">04</span>
+        <h3 class="card-title reveal-hidden" data-i18n="e4Title">Crescimento Bloqueado</h3>
+        <p class="card-body reveal-hidden" data-i18n="e4Body">Sem os três pilares juntos, Autoridade, Posicionamento e IA, você continua patinando enquanto outros crescem.</p>
+        <div class="card-link">A Solução <iconify-icon icon="solar:arrow-right-linear"></iconify-icon></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BANNER — O Sistema API™
+══════════════════════════════════════ -->
+<div class="banner-section">
+  <div class="banner-grid">
+    <div class="banner-accent">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+        <span class="font-syne" style="font-size:clamp(4rem,10vw,8rem);font-weight:900;color:rgba(249,115,22,0.08);user-select:none;">API</span>
+      </div>
+    </div>
+    <div class="banner-text-col" style="grid-column:span 1;">
+      <h2 class="banner-heading font-syne reveal-hidden" style="font-size:clamp(2.5rem,8vw,8rem);" data-i18n="bannerAPI">O Sistema API™</h2>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MÓDULOS
+══════════════════════════════════════ -->
+<section id="modulos" class="modules-section">
+  <div class="modules-grid">
+
+    <div class="modules-label">
+      <div>
+        <span class="font-mono" style="font-size:11px;color:#525252;display:block;margin-bottom:16px;" data-i18n="modulosBadge">/// Módulos</span>
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:500;color:#fff;letter-spacing:-0.05em;line-height:0.9;margin-bottom:24px;" data-i18n="modulosHeading">O Que Você Vai Aprender</h2>
+        <p class="reveal-hidden" style="font-size:13px;color:#a3a3a3;line-height:1.6;margin-bottom:32px;" data-i18n="modulosBody">Tudo que você precisa para ter um Instagram profissional do zero — design, conteúdo, IA e estrutura digital.</p>
+      </div>
+      <div class="btn-wrap reveal-hidden" style="width:max-content;margin-top:48px;">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner"><span data-i18n="modulosCta">Ver Todos</span><iconify-icon icon="solar:arrow-right-up-linear" width="18" class="btn-icon"></iconify-icon></a>
+      </div>
+    </div>
+
+    <div class="modules-list">
+
+      <!-- ── MÓDULO 01 — Perfil card com pilares animados ── -->
+      <div class="module-row reveal-hidden">
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <span class="module-tag" data-i18n="mod1Tag">01 · FUNDAMENTOS</span>
+          <h3 class="module-title" data-i18n="mod1Title">Fundamentos da Presença Digital</h3>
+          <p class="module-body" data-i18n="mod1Body">Monte um perfil que transmite credibilidade na primeira visita: bio, foto, destaques e identidade visual do zero.</p>
+        </div>
+        <div class="module-visual" style="background:#0d0d0f;overflow:hidden;padding:20px;">
+          <!-- glow -->
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(249,115,22,0.10),transparent 65%);pointer-events:none;"></div>
+          <!-- grid bg -->
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;"></div>
+
+          <div style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+            <!-- mock profile header -->
+            <div style="display:flex;align-items:center;gap:12px;padding:10px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:4px;">
+              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ea580c);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                <iconify-icon icon="solar:user-bold" width="18" style="color:#fff;"></iconify-icon>
+              </div>
+              <div style="flex:1;">
+                <div style="width:70%;height:7px;background:rgba(255,255,255,0.25);border-radius:2px;margin-bottom:5px;"></div>
+                <div style="width:45%;height:5px;background:rgba(249,115,22,0.5);border-radius:2px;"></div>
+              </div>
+              <div style="padding:4px 10px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);border-radius:2px;">
+                <span style="font-family:monospace;font-size:8px;color:#f97316;text-transform:uppercase;letter-spacing:0.1em;">Pro</span>
+              </div>
+            </div>
+
+            <!-- 3 pillar bars animating in -->
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-family:monospace;font-size:8px;color:#525252;width:80px;text-transform:uppercase;letter-spacing:0.1em;" data-i18n="visBar1">Autoridade</span>
+                <div style="flex:1;height:5px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;">
+                  <div style="height:100%;width:88%;background:linear-gradient(90deg,#f97316,#fb923c);border-radius:2px;animation:barFill 2.5s ease-out both;box-shadow:0 0 8px rgba(249,115,22,0.5);"></div>
+                </div>
+                <span style="font-family:monospace;font-size:8px;color:#f97316;">88%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-family:monospace;font-size:8px;color:#525252;width:80px;text-transform:uppercase;letter-spacing:0.1em;" data-i18n="visBar2">Posição</span>
+                <div style="flex:1;height:5px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;">
+                  <div style="height:100%;width:74%;background:linear-gradient(90deg,#ea580c,#f97316);border-radius:2px;animation:barFill 2.5s 0.2s ease-out both;box-shadow:0 0 8px rgba(249,115,22,0.3);"></div>
+                </div>
+                <span style="font-family:monospace;font-size:8px;color:#f97316;">74%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-family:monospace;font-size:8px;color:#525252;width:80px;text-transform:uppercase;letter-spacing:0.1em;" data-i18n="visBar3">Identidade</span>
+                <div style="flex:1;height:5px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;">
+                  <div style="height:100%;width:96%;background:linear-gradient(90deg,#f97316,#fb923c);border-radius:2px;animation:barFill 2.5s 0.4s ease-out both;box-shadow:0 0 8px rgba(249,115,22,0.5);"></div>
+                </div>
+                <span style="font-family:monospace;font-size:8px;color:#f97316;">96%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MÓDULO 02 — Content calendar grid ── -->
+      <div class="module-row reveal-hidden">
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <span class="module-tag" data-i18n="mod2Tag">02 · CONTEÚDO</span>
+          <h3 class="module-title" data-i18n="mod2Title">Estratégia de Conteúdo</h3>
+          <p class="module-body" data-i18n="mod2Body">Crie qualquer formato: Reels, carrosséis, posts, Stories e destaques, com estratégia e design profissional.</p>
+        </div>
+        <div class="module-visual" style="background:#0d0d0f;overflow:hidden;padding:20px;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%,rgba(249,115,22,0.09),transparent 65%);pointer-events:none;"></div>
+
+          <div style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;gap:8px;">
+            <!-- header -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+              <span style="font-family:monospace;font-size:9px;color:#525252;text-transform:uppercase;letter-spacing:0.15em;" data-i18n="calLabel">Calendário</span>
+              <div style="display:flex;gap:4px;">
+                <div style="width:16px;height:16px;background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+                  <iconify-icon icon="solar:clapperboard-edit-bold" width="10" style="color:#f97316;"></iconify-icon>
+                </div>
+                <div style="width:16px;height:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+                  <iconify-icon icon="solar:gallery-bold" width="10" style="color:#525252;"></iconify-icon>
+                </div>
+                <div style="width:16px;height:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+                  <iconify-icon icon="solar:chat-round-bold" width="10" style="color:#525252;"></iconify-icon>
+                </div>
+              </div>
+            </div>
+            <!-- 4×4 post grid -->
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;flex:1;">
+              <!-- row 1 -->
+              <div style="background:linear-gradient(135deg,rgba(249,115,22,0.25),rgba(249,115,22,0.08));border:1px solid rgba(249,115,22,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;animation:pulseCell 3s 0.0s ease-in-out infinite;"><iconify-icon icon="solar:clapperboard-edit-bold" width="12" style="color:#f97316;"></iconify-icon></div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <div style="background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);border-radius:2px;display:flex;align-items:center;justify-content:center;animation:pulseCell 3s 0.3s ease-in-out infinite;"><iconify-icon icon="solar:gallery-bold" width="12" style="color:#f97316;opacity:0.7;"></iconify-icon></div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <!-- row 2 -->
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <div style="background:rgba(249,115,22,0.18);border:1px solid rgba(249,115,22,0.35);border-radius:2px;display:flex;align-items:center;justify-content:center;animation:pulseCell 3s 0.6s ease-in-out infinite;"><iconify-icon icon="solar:chat-round-bold" width="12" style="color:#f97316;opacity:0.8;"></iconify-icon></div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <div style="background:linear-gradient(135deg,rgba(249,115,22,0.25),rgba(249,115,22,0.08));border:1px solid rgba(249,115,22,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;animation:pulseCell 3s 0.9s ease-in-out infinite;"><iconify-icon icon="solar:clapperboard-edit-bold" width="12" style="color:#f97316;"></iconify-icon></div>
+              <!-- row 3 -->
+              <div style="background:rgba(249,115,22,0.10);border:1px solid rgba(249,115,22,0.2);border-radius:2px;display:flex;align-items:center;justify-content:center;"><iconify-icon icon="solar:gallery-bold" width="12" style="color:#f97316;opacity:0.5;"></iconify-icon></div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:2px;"></div>
+              <div style="background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);border-radius:2px;"></div>
+            </div>
+            <!-- format tags -->
+            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:2px;">
+              <span style="font-family:monospace;font-size:8px;padding:2px 7px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.35);border-radius:2px;color:#f97316;" data-i18n="fmtReels">Reels</span>
+              <span style="font-family:monospace;font-size:8px;padding:2px 7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:#737373;" data-i18n="fmtPosts">Posts</span>
+              <span style="font-family:monospace;font-size:8px;padding:2px 7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:#737373;" data-i18n="fmtStories">Stories</span>
+              <span style="font-family:monospace;font-size:8px;padding:2px 7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:#737373;" data-i18n="fmtHighlights">Destaques</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MÓDULO 03 — IA prompt terminal ── -->
+      <div class="module-row reveal-hidden">
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <span class="module-tag" data-i18n="mod3Tag">03 · INTELIGÊNCIA ARTIFICIAL</span>
+          <h3 class="module-title" data-i18n="mod3Title">IA Aplicada ao Conteúdo</h3>
+          <p class="module-body" data-i18n="mod3Body">Use IA para criar legendas, roteiros, artes e conteúdos completos. Produção profissional sem agência, sem custo alto.</p>
+        </div>
+        <div class="module-visual module-visual--terminal" style="background:#0a0a0b;overflow:hidden;padding:0;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(249,115,22,0.08),transparent 60%);pointer-events:none;"></div>
+
+          <!-- terminal window -->
+          <div style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;">
+            <!-- titlebar -->
+            <div style="display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);">
+              <div style="width:8px;height:8px;border-radius:50%;background:#f97316;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#404040;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#404040;"></div>
+              <span style="font-family:monospace;font-size:9px;color:#525252;margin-left:8px;letter-spacing:0.1em;">prompt_studio.ai</span>
+            </div>
+            <!-- prompt lines -->
+            <div style="flex:1;padding:12px 16px;display:flex;flex-direction:column;gap:8px;overflow:hidden;">
+              <div style="display:flex;gap:8px;align-items:flex-start;">
+                <span style="font-family:monospace;font-size:9px;color:#f97316;flex-shrink:0;margin-top:1px;">›</span>
+                <div style="flex:1;">
+                  <span style="font-family:monospace;font-size:9px;color:#d4d4d4;line-height:1.5;"><span data-i18n="terminalPrompt">Crie uma legenda para Reel sobre <span style="color:#f97316;">autoridade</span> no nicho digital</span></span>
+                </div>
+              </div>
+              <div style="padding:8px 10px;background:rgba(249,115,22,0.06);border-left:2px solid rgba(249,115,22,0.5);border-radius:0 2px 2px 0;">
+                <span style="font-family:monospace;font-size:8px;color:#a3a3a3;line-height:1.6;"><span data-i18n="terminalReply">"Você não precisa de mais seguidores.<br>Você precisa que os certos te <span style="color:#f97316;">reconheçam</span>."</span></span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;">
+                <span style="font-family:monospace;font-size:9px;color:#f97316;flex-shrink:0;margin-top:1px;">›</span>
+                <span style="font-family:monospace;font-size:9px;color:#737373;" data-i18n="terminalCmd">Gerar roteiro de 30s para Reel...</span>
+              </div>
+              <!-- blinking cursor -->
+              <div style="display:flex;align-items:center;gap:4px;">
+                <span style="font-family:monospace;font-size:9px;color:#525252;">›</span>
+                <div style="width:6px;height:12px;background:#f97316;border-radius:1px;animation:blink 1s step-end infinite;"></div>
+              </div>
+            </div>
+            <!-- bottom badge -->
+            <div style="padding:8px 14px;border-top:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-family:monospace;font-size:8px;color:#525252;" data-i18n="promptsAvail">101 prompts disponíveis</span>
+              <div style="display:flex;align-items:center;gap:4px;">
+                <div style="width:5px;height:5px;border-radius:50%;background:#f97316;animation:blink 2s ease-in-out infinite;"></div>
+                <span style="font-family:monospace;font-size:8px;color:#f97316;" data-i18n="activeStatus">ativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MÓDULO 04 — Digital structure map ── -->
+      <div class="module-row reveal-hidden" style="border-bottom:none;">
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <span class="module-tag" data-i18n="mod4Tag">04 · ESTRUTURA DIGITAL</span>
+          <h3 class="module-title" data-i18n="mod4Title">Estrutura de Presença Digital</h3>
+          <p class="module-body" data-i18n="mod4Body">Crie seu site, landing page, link da bio e portfólio, tudo gratuito, com ferramentas profissionais ensinadas no método.</p>
+        </div>
+        <div class="module-visual" style="background:#0d0d0f;overflow:hidden;padding:20px;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(249,115,22,0.07),transparent 70%);pointer-events:none;"></div>
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:20px 20px;pointer-events:none;"></div>
+
+          <div style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0;">
+
+            <!-- hub node -->
+            <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ea580c);display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(249,115,22,0.5);animation:hubPulse 3s ease-in-out infinite;flex-shrink:0;">
+              <iconify-icon icon="solar:global-bold" width="24" style="color:#fff;"></iconify-icon>
+            </div>
+
+            <!-- connector lines + leaf nodes -->
+            <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+              <!-- left node -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                <div style="width:1px;height:16px;background:rgba(249,115,22,0.3);"></div>
+                <div style="padding:5px 8px;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:2px;display:flex;align-items:center;gap:4px;">
+                  <iconify-icon icon="solar:document-text-linear" width="10" style="color:#f97316;"></iconify-icon>
+                  <span style="font-family:monospace;font-size:8px;color:#f97316;white-space:nowrap;" data-i18n="nodeLanding">Landing</span>
+                </div>
+              </div>
+
+              <!-- center node -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                <div style="width:1px;height:16px;background:rgba(249,115,22,0.4);"></div>
+                <div style="padding:5px 8px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.45);border-radius:2px;display:flex;align-items:center;gap:4px;box-shadow:0 0 10px rgba(249,115,22,0.2);">
+                  <iconify-icon icon="solar:shop-linear" width="10" style="color:#f97316;"></iconify-icon>
+                  <span style="font-family:monospace;font-size:8px;color:#f97316;white-space:nowrap;" data-i18n="nodePortfolio">Portfólio</span>
+                </div>
+              </div>
+
+              <!-- right node -->
+              <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                <div style="width:1px;height:16px;background:rgba(249,115,22,0.3);"></div>
+                <div style="padding:5px 8px;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:2px;display:flex;align-items:center;gap:4px;">
+                  <iconify-icon icon="solar:link-linear" width="10" style="color:#f97316;"></iconify-icon>
+                  <span style="font-family:monospace;font-size:8px;color:#f97316;white-space:nowrap;" data-i18n="nodeBioLink">Bio Link</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:8px;display:flex;align-items:center;gap:6px;">
+              <div style="width:30px;height:1px;background:rgba(249,115,22,0.3);"></div>
+              <span style="font-family:monospace;font-size:8px;color:#525252;letter-spacing:0.15em;text-transform:uppercase;" data-i18n="presence247">Presença 24/7</span>
+              <div style="width:30px;height:1px;background:rgba(249,115,22,0.3);"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BÔNUS / GARANTIA — process rows
+══════════════════════════════════════ -->
+<section id="bonus" class="process-section">
+  <div class="process-grid">
+
+    <div class="process-label">
+      <div>
+        <span class="font-mono" style="font-size:11px;color:#525252;display:block;margin-bottom:16px;" data-i18n="bonusBadge">/// Bônus Exclusivos</span>
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:500;color:#fff;letter-spacing:-0.025em;margin-bottom:16px;" data-i18n="bonusHeading">O Que Você Recebe</h2>
+        <p class="reveal-hidden" style="font-size:13px;color:#a3a3a3;line-height:1.6;margin-bottom:32px;" data-i18n="bonusBody">Junto com os 4 módulos, você já sai com tudo pronto para executar — sem precisar comprar mais nada.</p>
+      </div>
+      <div class="btn-wrap reveal-hidden" style="width:max-content;margin-top:auto;">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner"><span style="font-size:11px;" data-i18n="bonusCta">Quero Entrar</span><iconify-icon icon="solar:arrow-right-up-linear" width="16" class="btn-icon"></iconify-icon></a>
+      </div>
+    </div>
+
+    <div class="process-rows-wrap" style="display:flex;flex-direction:column;">
+      <div class="process-row reveal-hidden">
+        <div class="process-icon-col">
+          <div class="process-icon"><iconify-icon icon="solar:magic-stick-3-linear" width="20" height="20"></iconify-icon></div>
+          <span class="process-badge">B1</span>
+        </div>
+        <div class="process-content">
+          <h3 class="process-title reveal-hidden" data-i18n="b1Title">Prompts Prontos para IA</h3>
+          <p class="process-body reveal-hidden" data-i18n="b1Body">Prompts prontos para criar posts, Reels, legendas, roteiros e artes com IA, sem travar na tela em branco.</p>
+        </div>
+      </div>
+      <div class="process-row reveal-hidden">
+        <div class="process-icon-col">
+          <div class="process-icon"><iconify-icon icon="solar:box-minimalistic-linear" width="20" height="20"></iconify-icon></div>
+          <span class="process-badge">B2</span>
+        </div>
+        <div class="process-content">
+          <h3 class="process-title reveal-hidden" data-i18n="b2Title">Ferramentas Gratuitas de Design e IA</h3>
+          <p class="process-body reveal-hidden" data-i18n="b2Body">As melhores ferramentas gratuitas para criar logos, sites, carrosséis, posts e Reels com qualidade profissional.</p>
+        </div>
+      </div>
+      <div class="process-row reveal-hidden">
+        <div class="process-icon-col">
+          <div class="process-icon"><iconify-icon icon="solar:graph-up-linear" width="20" height="20"></iconify-icon></div>
+          <span class="process-badge">→</span>
+        </div>
+        <div class="process-content">
+          <h3 class="process-title reveal-hidden" data-i18n="b3Title">Resultado Claro e Mensurável</h3>
+          <p class="process-body reveal-hidden" data-i18n="b3Body">Você sai do método com um Instagram profissional, conteúdo estratégico e design próprio, pronto para atrair e converter.</p>
+        </div>
+      </div>
+      <div class="process-row reveal-hidden" id="garantia" style="border-bottom:none;">
+        <div class="process-icon-col">
+          <div class="process-icon"><iconify-icon icon="solar:shield-check-linear" width="20" height="20"></iconify-icon></div>
+          <span class="process-badge">7D</span>
+        </div>
+        <div class="process-content">
+          <h3 class="process-title reveal-hidden" data-i18n="b4Title">Garantia de 7 Dias</h3>
+          <p class="process-body reveal-hidden" data-i18n="b4Body">Aplique o método. Se em 7 dias você não ver clareza e progresso na sua presença digital, devolvemos teu acesso. Sem perguntas.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     BANNER — Presença com intenção
+══════════════════════════════════════ -->
+<div class="banner-section" id="presenca">
+  <div class="banner-grid">
+    <div class="banner-accent ba-kinetic">
+      <!-- grid de pontos -->
+      <div class="bak-dots"></div>
+      <!-- linhas traçadas -->
+      <svg class="bak-lines" viewBox="0 0 200 400" preserveAspectRatio="none" aria-hidden="true">
+        <line class="bak-line" x1="100" y1="0"   x2="100" y2="400" stroke-dasharray="400" stroke-dashoffset="400"/>
+        <line class="bak-line" x1="0"   y1="200" x2="200" y2="200" stroke-dasharray="200" stroke-dashoffset="200" style="animation-delay:0.4s"/>
+        <line class="bak-line bak-line--dim" x1="0" y1="0"   x2="200" y2="400" stroke-dasharray="450" stroke-dashoffset="450" style="animation-delay:0.8s"/>
+        <line class="bak-line bak-line--dim" x1="200" y1="0" x2="0"   y2="400" stroke-dasharray="450" stroke-dashoffset="450" style="animation-delay:1.1s"/>
+      </svg>
+      <!-- orbe central -->
+      <div class="bak-center">
+        <div class="bak-ring bak-ring-1"></div>
+        <div class="bak-ring bak-ring-2"></div>
+        <div class="bak-ring bak-ring-3"></div>
+        <div class="bak-core"></div>
+        <div class="bak-label">IMPERIVM™</div>
+      </div>
+      <!-- corner marks -->
+      <div class="bak-corner bak-corner--tl"></div>
+      <div class="bak-corner bak-corner--tr"></div>
+      <div class="bak-corner bak-corner--bl"></div>
+      <div class="bak-corner bak-corner--br"></div>
+    </div>
+    <div class="banner-text-col" style="grid-column:span 1;">
+      <div class="banner-tag reveal-hidden">/// Presença Digital</div>
+      <h2 class="banner-heading font-syne reveal-hidden" style="font-size:clamp(2.5rem,8vw,8rem);">
+        <span class="banner-word-1" data-i18n="bannerWord1">Presença</span><br>
+        <span class="banner-word-2" style="color:#f97316;">com</span><br>
+        <span class="banner-word-3" data-i18n="bannerWord3">intenção</span>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════ -->
+<section id="cta" class="cta-section">
+  <div class="cta-glow"><div class="cta-glow-orb"></div></div>
+  <div class="cta-content">
+    <span class="cta-tag" data-i18n="ctaBadge">/// Seu Próximo Passo</span>
+    <h2 class="cta-heading reveal-hidden" style="font-size:clamp(2.5rem,8vw,7rem);">Transforme sua presença.<br/>Agora.</h2>
+    <p class="cta-sub reveal-hidden" data-i18n="ctaSub">Instagram profissional, design próprio, conteúdo com IA. Acesso imediato.</p>
+    <div class="btn-wrap reveal-hidden">
+      <div class="btn-spin animate-border-spin"></div>
+      <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner" style="padding:16px 40px;background:linear-gradient(135deg,#f97316,#ea580c);border-color:transparent;box-shadow:0 4px 24px rgba(249,115,22,0.4);">
+        <span style="font-size:13px;color:#fff;" data-i18n="ctaBtn">Quero Entrar no Método IMPERIVM™</span>
+        <iconify-icon icon="solar:arrow-right-up-linear" width="18" style="color:rgba(255,255,255,0.8);transition:transform 0.3s;"></iconify-icon>
+      </a>
+    </div>
+    <p class="cta-note" data-i18n="ctaNote">Garantia de 7 dias • Acesso imediato</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SERVIÇO PERSONALIZADO
+══════════════════════════════════════ -->
+<section class="service-section" id="servico">
+  <!-- animated bg -->
+  <div class="service-bg"></div>
+  <div class="service-grid">
+
+    <!-- left: live activity visual -->
+    <div class="service-visual sv-live">
+      <!-- header bar -->
+      <div class="svl-header">
+        <div class="svl-avatar"></div>
+        <div style="flex:1;">
+          <div style="font-family:monospace;font-size:10px;color:#d4d4d4;letter-spacing:0.05em;">@seu.perfil</div>
+          <div style="display:flex;align-items:center;gap:4px;margin-top:2px;">
+            <div class="svl-live-dot"></div>
+            <span style="font-family:monospace;font-size:8px;color:#f97316;letter-spacing:0.1em;text-transform:uppercase;" data-i18n="managedLabel">Gerenciado</span>
+          </div>
+        </div>
+        <div style="font-family:monospace;font-size:9px;color:#525252;">IMPERIVM™</div>
+      </div>
+
+      <!-- sparkline -->
+      <svg class="svl-sparkline" viewBox="0 0 120 32" preserveAspectRatio="none" aria-hidden="true">
+        <polyline class="svl-spark-line" points="0,28 15,22 30,24 45,16 60,18 75,10 90,8 105,4 120,2"/>
+        <polyline class="svl-spark-fill" points="0,28 15,22 30,24 45,16 60,18 75,10 90,8 105,4 120,2 120,32 0,32"/>
+        <circle class="svl-spark-dot" cx="120" cy="2" r="3"/>
+      </svg>
+      <!-- metrics row -->
+      <div class="svl-metrics">
+        <div class="svl-metric">
+          <div class="svl-metric-num">+2.4k</div>
+          <div class="svl-metric-lbl" data-i18n="metricFollowers">Seguidores</div>
+        </div>
+        <div class="svl-metric-divider"></div>
+        <div class="svl-metric">
+          <div class="svl-metric-num" style="color:#22c55e;">8.7%</div>
+          <div class="svl-metric-lbl" data-i18n="metricEngaj">Engaj.</div>
+        </div>
+        <div class="svl-metric-divider"></div>
+        <div class="svl-metric">
+          <div class="svl-metric-num">12</div>
+          <div class="svl-metric-lbl" data-i18n="metricPosts">Posts/mês</div>
+        </div>
+      </div>
+
+      <!-- activity feed scroll -->
+      <div class="svl-feed-wrap">
+        <div class="svl-feed">
+          <!-- 8 items × 2 for infinite loop -->
+          <div class="svl-item"><iconify-icon icon="solar:heart-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span>Novo seguidor: <b>@marcas_br</b></span><span class="svl-time">agora</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:chat-round-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Comentário em Reel publicado</span><span class="svl-time">2min</span></div>
+          <div class="svl-item svl-item--hot"><iconify-icon icon="solar:fire-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span><b>Reel alcançou 3k views</b></span><span class="svl-time">5min</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:bookmark-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Post salvo 47x hoje</span><span class="svl-time">12min</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:heart-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span>Novo seguidor: <b>@parceiro_xyz</b></span><span class="svl-time">18min</span></div>
+          <div class="svl-item svl-item--hot"><iconify-icon icon="solar:chart-bold" width="12" style="color:#22c55e;flex-shrink:0;"></iconify-icon><span><b>Alcance +340% esta semana</b></span><span class="svl-time">1h</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:chat-round-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>DM de lead qualificado</span><span class="svl-time">2h</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:bookmark-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Conteúdo da semana agendado</span><span class="svl-time">3h</span></div>
+          <!-- duplicate for loop -->
+          <div class="svl-item"><iconify-icon icon="solar:heart-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span>Novo seguidor: <b>@marcas_br</b></span><span class="svl-time">agora</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:chat-round-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Comentário em Reel publicado</span><span class="svl-time">2min</span></div>
+          <div class="svl-item svl-item--hot"><iconify-icon icon="solar:fire-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span><b>Reel alcançou 3k views</b></span><span class="svl-time">5min</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:bookmark-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Post salvo 47x hoje</span><span class="svl-time">12min</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:heart-bold" width="12" style="color:#f97316;flex-shrink:0;"></iconify-icon><span>Novo seguidor: <b>@parceiro_xyz</b></span><span class="svl-time">18min</span></div>
+          <div class="svl-item svl-item--hot"><iconify-icon icon="solar:chart-bold" width="12" style="color:#22c55e;flex-shrink:0;"></iconify-icon><span><b>Alcance +340% esta semana</b></span><span class="svl-time">1h</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:chat-round-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>DM de lead qualificado</span><span class="svl-time">2h</span></div>
+          <div class="svl-item"><iconify-icon icon="solar:bookmark-bold" width="12" style="color:#a3a3a3;flex-shrink:0;"></iconify-icon><span>Conteúdo da semana agendado</span><span class="svl-time">3h</span></div>
+        </div>
+      </div>
+
+      <!-- bottom status bar -->
+      <div class="svl-status">
+        <div class="svl-live-dot" style="animation-delay:0.5s;"></div>
+        <span style="font-family:monospace;font-size:8px;color:#525252;letter-spacing:0.1em;" data-i18n="activeLabel">ATIVO · CRESCENDO · CONVERTENDO</span>
+        <div class="svl-progress">
+          <div class="svl-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right: copy + CTA -->
+    <div class="service-copy">
+      <span class="service-tag" data-i18n="serviceBadge">/// Serviço Exclusivo</span>
+      <h2 class="service-heading font-syne reveal-hidden">
+        Prefere que <span style="color:#f97316;">alguém faça</span><br>por você?
+      </h2>
+      <p class="service-body reveal-hidden" data-i18n="serviceBody">
+        Quer resultado sem aprender do zero? Nossa equipe cuida do seu perfil, estratégia, design, criação e publicação. Você foca no seu negócio.
+      </p>
+      <ul class="service-list reveal-hidden">
+        <li><iconify-icon icon="solar:check-circle-linear" width="16" style="color:#f97316;flex-shrink:0;"></iconify-icon> <span data-i18n="sl1">Estratégia e identidade visual para o seu nicho</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear" width="16" style="color:#f97316;flex-shrink:0;"></iconify-icon> <span data-i18n="sl2">Criação de posts, Reels, carrosséis e Stories</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear" width="16" style="color:#f97316;flex-shrink:0;"></iconify-icon> <span data-i18n="sl3">Design profissional: logo, site e artes</span></li>
+        <li><iconify-icon icon="solar:check-circle-linear" width="16" style="color:#f97316;flex-shrink:0;"></iconify-icon> <span data-i18n="sl4">Publicação, consistência e resultados</span></li>
+      </ul>
+      <div class="btn-wrap reveal-hidden" style="width:max-content;">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://wa.me/5511914417241?text=Ol%C3%A1!%20Vim%20pelo%20seu%20m%C3%A9todo,%20mas%20no%20momento%20prefiro%20contratar%20um%20servi%C3%A7o%20personalizado.%20Gostaria%20de%20saber%20valores%20e%20como%20funciona%20a%20gest%C3%A3o%20de%20conte%C3%BAdo%20para%20o%20meu%20perfil.%20Meu%20Instagram%20%C3%A9%3A%20" target="_blank" rel="noopener" class="btn-inner service-btn">
+          <iconify-icon icon="solar:chat-round-bold" width="16" style="color:#fff;flex-shrink:0;"></iconify-icon>
+          <span data-i18n="serviceCta">Quero um Social Media</span>
+          <iconify-icon icon="solar:arrow-right-up-linear" width="16" class="btn-icon"></iconify-icon>
+        </a>
+      </div>
+      <p style="font-size:12px;color:#525252;margin-top:16px;" data-i18n="serviceNote">Atendimento via WhatsApp · Resposta em até 2h</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div>
+        <span class="font-mono" style="font-size:11px;color:#525252;display:block;margin-bottom:16px;">///</span>
+        <h2 class="font-syne reveal-hidden" style="font-size:clamp(1.5rem,3vw,2rem);font-weight:500;color:#fff;letter-spacing:-0.025em;margin-bottom:16px;">IIMPERIVM</h2>
+        <p class="reveal-hidden" style="font-size:13px;color:#a3a3a3;line-height:1.6;" data-i18n="footerDesc">Instagram profissional, design, conteúdo e IA — tudo em um método completo.</p>
+      </div>
+      <div class="btn-wrap reveal-hidden" style="width:max-content;">
+        <div class="btn-spin animate-border-spin"></div>
+        <a href="https://metodoapi2026.github.io/quiz/" target="_blank" rel="noopener" class="btn-inner"><span style="font-size:11px;" data-i18n="footerCta">Entrar no Método</span><iconify-icon icon="solar:arrow-right-up-linear" width="16" class="btn-icon"></iconify-icon></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-i18n="footerMethod">Método</h4>
+        <ul>
+          <li><a href="#metodo" data-i18n="fLink1">O Sistema</a></li>
+          <li><a href="#modulos" data-i18n="fLink2">Módulos</a></li>
+          <li><a href="#bonus" data-i18n="fLink3">Bônus</a></li>
+          <li><a href="#garantia" data-i18n="fLink4">Garantia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerSocial">Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4 data-i18n="newsletter">Newsletter</h4>
+      <input type="email" placeholder="Seu e-mail" data-i18n-placeholder="newsletterPlaceholder" />
+      <button type="button" data-i18n="newsletterBtn">Inscrever</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footerCopy">© 2025 IIMPERIVM. Todos os direitos reservados.</span>
+    <span data-i18n="footerTagline">Método IMPERIVM™, Presença Digital Poderosa.</span>
+  </div>
+</footer>
+
+
+<!-- LANGUAGE SWITCHER -->
+<style>
+  #lang-switcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    background: rgba(10,10,10,0.92);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 8px 10px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  }
+  .lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 26px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    opacity: 0.4;
+    overflow: hidden;
+    position: relative;
+  }
+  .lang-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+  }
+  .lang-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .lang-btn.active {
+    opacity: 1;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.2), 0 2px 12px rgba(249,115,22,0.15);
+    transform: scale(1.08);
+  }
+  .lang-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
+</style>
+
+<div id="lang-switcher">
+  <!-- Brazil -->
+  <button class="lang-btn" id="lang-btn-pt" onclick="setLang('pt')" title="Português (BR)" aria-label="Português">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26" style="width:36px;height:26px;display:block;">
+      <rect width="36" height="26" fill="#009c3b" rx="2"/>
+      <polygon points="18,3 33,13 18,23 3,13" fill="#ffdf00"/>
+      <circle cx="18" cy="13" r="5.6" fill="#002776"/>
+      <path d="M12.6,11.2 Q18,9.5 23.4,11.5" stroke="white" stroke-width="0.9" fill="none"/>
+      <rect x="13" y="12.2" width="10" height="1.2" rx="0.6" fill="white" opacity="0.9"/>
+      <rect x="13.5" y="13.8" width="9" height="1.2" rx="0.6" fill="white" opacity="0.7"/>
+    </svg>
+  </button>
+
+  <div class="lang-divider"></div>
+
+  <!-- USA -->
+  <button class="lang-btn" id="lang-btn-en" onclick="setLang('en')" title="English (US)" aria-label="English">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26" style="width:36px;height:26px;display:block;">
+      <rect width="36" height="26" fill="#fff" rx="2"/>
+      <!-- 13 stripes -->
+      <rect y="0"  width="36" height="2" fill="#B22234"/>
+      <rect y="4"  width="36" height="2" fill="#B22234"/>
+      <rect y="8"  width="36" height="2" fill="#B22234"/>
+      <rect y="12" width="36" height="2" fill="#B22234"/>
+      <rect y="16" width="36" height="2" fill="#B22234"/>
+      <rect y="20" width="36" height="2" fill="#B22234"/>
+      <rect y="24" width="36" height="2" fill="#B22234"/>
+      <!-- Canton -->
+      <rect width="15" height="14" fill="#3C3B6E" rx="0"/>
+      <!-- Stars (simplified 3×3 grid, representative) -->
+      <g fill="white" font-size="2.8">
+        <circle cx="2"  cy="2"  r="1"/><circle cx="5"  cy="2"  r="1"/><circle cx="8"  cy="2"  r="1"/>
+        <circle cx="11" cy="2"  r="1"/><circle cx="14" cy="2"  r="1"/>
+        <circle cx="2"  cy="5"  r="1"/><circle cx="5"  cy="5"  r="1"/><circle cx="8"  cy="5"  r="1"/>
+        <circle cx="11" cy="5"  r="1"/><circle cx="14" cy="5"  r="1"/>
+        <circle cx="2"  cy="8"  r="1"/><circle cx="5"  cy="8"  r="1"/><circle cx="8"  cy="8"  r="1"/>
+        <circle cx="11" cy="8"  r="1"/><circle cx="14" cy="8"  r="1"/>
+        <circle cx="2"  cy="11" r="1"/><circle cx="5"  cy="11" r="1"/><circle cx="8"  cy="11" r="1"/>
+        <circle cx="11" cy="11" r="1"/><circle cx="14" cy="11" r="1"/>
+      </g>
+    </svg>
+  </button>
+
+  <div class="lang-divider"></div>
+
+  <!-- Spain -->
+  <button class="lang-btn" id="lang-btn-es" onclick="setLang('es')" title="Español (ES)" aria-label="Español">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26" style="width:36px;height:26px;display:block;">
+      <rect width="36" height="26" fill="#c60b1e" rx="2"/>
+      <rect y="6.5" width="36" height="13" fill="#ffc400"/>
+      <!-- Coat of arms (simplified pillar) -->
+      <rect x="14.5" y="8.5" width="3" height="9" rx="0.5" fill="#c60b1e" opacity="0.5"/>
+      <rect x="18.5" y="8.5" width="3" height="9" rx="0.5" fill="#c60b1e" opacity="0.5"/>
+      <rect x="14" y="8" width="8" height="2" rx="0.5" fill="#c60b1e" opacity="0.6"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  IMPERIVM™ — i18n SYSTEM v2
+//  • Auto-detects browser language on load
+//  • Maps pt/en/es (fallback → en)
+//  • Persists manual choice in localStorage
+//  • Uses data-i18n attributes for ALL text nodes
+//  • Uses data-i18n-placeholder for input placeholders
+//  • Uses data-i18n-html for innerHTML (with embedded HTML)
+// ═══════════════════════════════════════════════════════════════
+
+const I18N = {
+  pt: {
+    pageTitle: "Método IMPERIVM™, Presença Digital Poderosa",
+    // Header
+    navMetodo: "Método", navModulos: "Módulos", navBonus: "Bônus", navGarantia: "Garantia",
+    navCta: "Quero Entrar",
+    // Hero
+    heroBadge: "/// Método IMPERIVM™",
+    heroSub: "Do zero ao Instagram profissional, com design, estratégia e IA. Tudo em um método.",
+    heroOrbitLabel: "Autoridade · Posicionamento · IA",
+    heroCta: "Quero Entrar",
+    // Marquee
+    mq1:"Autoridade", mq2:"Posicionamento", mq3:"Inteligência Artificial",
+    mq4:"Crescimento", mq5:"Presença Digital", mq6:"Reconhecimento", mq7:"Transformação",
+    // Metodo
+    metodoBadge: "/// O Problema",
+    problemLabel: "SEM ESTRATÉGIA",
+    metodoHeadline: "Seu Instagram poderia estar gerando clientes, oportunidades e reconhecimento agora.",
+    metodoBody: "Você posta. Você tenta. Mas sem método, cada esforço começa do zero. O IMPERIVM™ muda isso.",
+    metodoCta: "Ver Solução",
+    stat1Body: "Módulos completos: perfil, design, conteúdo, IA e presença digital.",
+    stat2Body: "Prompts prontos para criar posts, Reels, legendas e roteiros com IA.",
+    stat3Body: "Ferramentas gratuitas de design, edição e automação já incluídas.",
+    // Erros
+    errosBadge: "/// Erros Críticos",
+    errosHeading: "4 Erros que Bloqueiam Seu Crescimento",
+    errosBody: "Identifique o que está travando seu crescimento antes de continuar postando.",
+    errosCta: "Evitar Agora",
+    e1Caption: "Postar sem Estratégia", e1CaptionSub: "Conteúdo aleatório não constrói audiência.",
+    e1Title: "Postar sem Estratégia",
+    e1Body: "Postar sem estratégia é trabalho perdido. Cada conteúdo precisa ter um papel claro: atrair, engajar ou converter.",
+    e1Link: "Como Corrigir",
+    iaDashboard: "IA Dashboard",
+    iaRow1: "Conteúdo gerado com IA", iaRow2: "Tempo de produção", iaRow3: "Consistência de posts",
+    iaBarLabel1: "Produtividade sem IA", iaBarLabel2: "Com IMPERIVM™ + IA",
+    e2Title: "Ignorar a IA",
+    e2Body: "Quem não usa IA produz menos e gasta mais tempo. O IMPERIVM™ inclui tudo para você criar 10× mais rápido.",
+    e2Link: "Como Corrigir",
+    pyramidLabel: "Pirâmide de Autoridade",
+    pyramidLevel1: "Referência", pyramidLevel2: "Autoridade",
+    pyramidLevel3: "Posicionamento", pyramidLevel4: "Perfil Anônimo",
+    e3Title: "Sem Autoridade",
+    e3Body: "Seguidores sem autoridade não viram clientes. Você precisa ser reconhecido como referência, e o método ensina exatamente isso.",
+    e3Link: "Como Construir",
+    chartNoMethod: "Sem Método", chartWithMethod: "Com IMPERIVM™",
+    toggleEngagement: "Engajamento", toggleAuthority: "Autoridade",
+    toggleOpportunities: "Oportunidades", toggleGrowth: "Crescimento",
+    e4Title: "Crescimento Bloqueado",
+    e4Body: "Sem os três pilares juntos, Autoridade, Posicionamento e IA, você continua patinando enquanto outros crescem.",
+    e4Link: "A Solução",
+    // Banner
+    bannerAPI: "O Sistema API™",
+    // Modulos
+    modulosBadge: "/// Módulos",
+    modulosHeading: "O Que Você Vai Aprender",
+    modulosBody: "Tudo que você precisa para ter um Instagram profissional do zero — design, conteúdo, IA e estrutura digital.",
+    modulosCta: "Ver Todos",
+    mod1Tag: "01 · FUNDAMENTOS", mod1Title: "Fundamentos da Presença Digital",
+    mod1Body: "Monte um perfil que transmite credibilidade na primeira visita: bio, foto, destaques e identidade visual do zero.",
+    visBar1: "Autoridade", visBar2: "Posição", visBar3: "Identidade",
+    mod2Tag: "02 · CONTEÚDO", mod2Title: "Estratégia de Conteúdo",
+    mod2Body: "Crie qualquer formato: Reels, carrosséis, posts, Stories e destaques, com estratégia e design profissional.",
+    calLabel: "Calendário",
+    fmtReels: "Reels", fmtPosts: "Posts", fmtStories: "Stories", fmtHighlights: "Destaques",
+    mod3Tag: "03 · INTELIGÊNCIA ARTIFICIAL", mod3Title: "IA Aplicada ao Conteúdo",
+    mod3Body: "Use IA para criar legendas, roteiros, artes e conteúdos completos. Produção profissional sem agência, sem custo alto.",
+    terminalPrompt: "Crie uma legenda para Reel sobre <span style=\"color:#f97316;\">autoridade</span> no nicho digital",
+    terminalReply: "\"Você não precisa de mais seguidores.<br>Você precisa que os certos te <span style=\"color:#f97316;\">reconheçam</span>.\"",
+    terminalCmd: "Gerar roteiro de 30s para Reel...",
+    promptsAvail: "101 prompts disponíveis", activeStatus: "ativo",
+    mod4Tag: "04 · ESTRUTURA DIGITAL", mod4Title: "Estrutura de Presença Digital",
+    mod4Body: "Crie seu site, landing page, link da bio e portfólio, tudo gratuito, com ferramentas profissionais ensinadas no método.",
+    nodeLanding: "Landing", nodePortfolio: "Portfólio", nodeBioLink: "Bio Link",
+    presence247: "Presença 24/7",
+    // Bonus
+    bonusBadge: "/// Bônus Exclusivos",
+    bonusHeading: "O Que Você Recebe",
+    bonusBody: "Junto com os 4 módulos, você já sai com tudo pronto para executar — sem precisar comprar mais nada.",
+    bonusCta: "Quero Entrar",
+    b1Title: "Prompts Prontos para IA",
+    b1Body: "Prompts prontos para criar posts, Reels, legendas, roteiros e artes com IA, sem travar na tela em branco.",
+    b2Title: "Ferramentas Gratuitas de Design e IA",
+    b2Body: "As melhores ferramentas gratuitas para criar logos, sites, carrosséis, posts e Reels com qualidade profissional.",
+    b3Title: "Resultado Claro e Mensurável",
+    b3Body: "Você sai do método com um Instagram profissional, conteúdo estratégico e design próprio, pronto para atrair e converter.",
+    b4Title: "Garantia de 7 Dias",
+    b4Body: "Aplique o método. Se em 7 dias você não ver clareza e progresso na sua presença digital, devolvemos teu acesso. Sem perguntas.",
+    // Banner presença
+    bannerWord1: "Presença", bannerWord3: "intenção",
+    // CTA
+    ctaBadge: "/// Seu Próximo Passo",
+    ctaHeadingHtml: "Transforme sua presença.<br/>Agora.",
+    ctaSub: "Instagram profissional, design próprio, conteúdo com IA. Acesso imediato.",
+    ctaBtn: "Quero Entrar no Método IMPERIVM™",
+    ctaNote: "Garantia de 7 dias • Acesso imediato",
+    // Service
+    serviceBadge: "/// Serviço Exclusivo",
+    serviceHeadingHtml: "Prefere que <span style=\"color:#f97316;\">alguém faça</span><br>por você?",
+    serviceBody: "Quer resultado sem aprender do zero? Nossa equipe cuida do seu perfil, estratégia, design, criação e publicação. Você foca no seu negócio.",
+    sl1: "Estratégia e identidade visual para o seu nicho",
+    sl2: "Criação de posts, Reels, carrosséis e Stories",
+    sl3: "Design profissional: logo, site e artes",
+    sl4: "Publicação, consistência e resultados",
+    serviceCta: "Quero um Social Media",
+    serviceNote: "Atendimento via WhatsApp · Resposta em até 2h",
+    managedLabel: "Gerenciado",
+    activeLabel: "ATIVO · CRESCENDO · CONVERTENDO",
+    metricFollowers: "Seguidores", metricEngaj: "Engaj.", metricPosts: "Posts/mês",
+    // Footer
+    footerDesc: "Instagram profissional, design, conteúdo e IA — tudo em um método completo.",
+    footerCta: "Entrar no Método",
+    footerMethod: "Método", footerSocial: "Social",
+    fLink1: "O Sistema", fLink2: "Módulos", fLink3: "Bônus", fLink4: "Garantia",
+    newsletter: "Newsletter", newsletterPlaceholder: "Seu e-mail", newsletterBtn: "Inscrever",
+    footerCopy: "© 2025 IIMPERIVM. Todos os direitos reservados.",
+    footerTagline: "Método IMPERIVM™, Presença Digital Poderosa.",
+  },
+
+  en: {
+    pageTitle: "IMPERIVM™ Method, Powerful Digital Presence",
+    navMetodo: "Method", navModulos: "Modules", navBonus: "Bonuses", navGarantia: "Guarantee",
+    navCta: "Get Access",
+    heroBadge: "/// IMPERIVM™ Method",
+    heroSub: "From zero to a professional Instagram — with design, strategy and AI. All in one method.",
+    heroOrbitLabel: "Authority · Positioning · AI",
+    heroCta: "Get Access",
+    mq1:"Authority", mq2:"Positioning", mq3:"Artificial Intelligence",
+    mq4:"Growth", mq5:"Digital Presence", mq6:"Recognition", mq7:"Transformation",
+    metodoBadge: "/// The Problem",
+    problemLabel: "NO STRATEGY",
+    metodoHeadline: "Your Instagram could be generating clients, opportunities and recognition right now.",
+    metodoBody: "You post. You try. But without a method, every effort starts from scratch. IMPERIVM™ changes that.",
+    metodoCta: "See the Solution",
+    stat1Body: "Complete modules: profile, design, content, AI and digital presence.",
+    stat2Body: "Ready-made prompts to create posts, Reels, captions and scripts with AI.",
+    stat3Body: "Free design, editing and automation tools already included.",
+    errosBadge: "/// Critical Mistakes",
+    errosHeading: "4 Mistakes Blocking Your Growth",
+    errosBody: "Identify what is holding back your growth before you keep posting.",
+    errosCta: "Fix It Now",
+    e1Caption: "Posting Without Strategy", e1CaptionSub: "Random content does not build an audience.",
+    e1Title: "Posting Without Strategy",
+    e1Body: "Posting without strategy is wasted work. Every piece of content needs a clear role: attract, engage or convert.",
+    e1Link: "How to Fix",
+    iaDashboard: "AI Dashboard",
+    iaRow1: "AI-generated content", iaRow2: "Production time", iaRow3: "Post consistency",
+    iaBarLabel1: "Productivity without AI", iaBarLabel2: "With IMPERIVM™ + AI",
+    e2Title: "Ignoring AI",
+    e2Body: "Those who don\'t use AI produce less and spend more time. IMPERIVM™ includes everything to help you create 10× faster.",
+    e2Link: "How to Fix",
+    pyramidLabel: "Authority Pyramid",
+    pyramidLevel1: "Reference", pyramidLevel2: "Authority",
+    pyramidLevel3: "Positioning", pyramidLevel4: "Anonymous Profile",
+    e3Title: "No Authority",
+    e3Body: "Followers without authority don\'t become clients. You need to be recognized as a reference — and the method teaches exactly that.",
+    e3Link: "How to Build",
+    chartNoMethod: "Without Method", chartWithMethod: "With IMPERIVM™",
+    toggleEngagement: "Engagement", toggleAuthority: "Authority",
+    toggleOpportunities: "Opportunities", toggleGrowth: "Growth",
+    e4Title: "Blocked Growth",
+    e4Body: "Without all three pillars — Authority, Positioning and AI — you keep spinning your wheels while others grow.",
+    e4Link: "The Solution",
+    bannerAPI: "The API™ System",
+    modulosBadge: "/// Modules",
+    modulosHeading: "What You Will Learn",
+    modulosBody: "Everything you need to have a professional Instagram from scratch — design, content, AI and digital structure.",
+    modulosCta: "See All",
+    mod1Tag: "01 · FOUNDATIONS", mod1Title: "Foundations of Digital Presence",
+    mod1Body: "Build a profile that conveys credibility on the first visit: bio, photo, highlights and visual identity from scratch.",
+    visBar1: "Authority", visBar2: "Position", visBar3: "Identity",
+    mod2Tag: "02 · CONTENT", mod2Title: "Content Strategy",
+    mod2Body: "Create any format: Reels, carousels, posts, Stories and highlights, with strategy and professional design.",
+    calLabel: "Calendar",
+    fmtReels: "Reels", fmtPosts: "Posts", fmtStories: "Stories", fmtHighlights: "Highlights",
+    mod3Tag: "03 · ARTIFICIAL INTELLIGENCE", mod3Title: "AI Applied to Content",
+    mod3Body: "Use AI to create captions, scripts, artwork and complete content. Professional production without an agency, without high cost.",
+    terminalPrompt: "Create a caption for a Reel about <span style=\"color:#f97316;\">authority</span> in the digital niche",
+    terminalReply: "\"You don\'t need more followers.<br>You need the right people to <span style=\"color:#f97316;\">recognize you</span>.\"",
+    terminalCmd: "Generate 30s script for Reel...",
+    promptsAvail: "101 prompts available", activeStatus: "active",
+    mod4Tag: "04 · DIGITAL STRUCTURE", mod4Title: "Digital Presence Structure",
+    mod4Body: "Build your website, landing page, bio link and portfolio — all free, with professional tools taught in the method.",
+    nodeLanding: "Landing", nodePortfolio: "Portfolio", nodeBioLink: "Bio Link",
+    presence247: "Presence 24/7",
+    bonusBadge: "/// Exclusive Bonuses",
+    bonusHeading: "What You Get",
+    bonusBody: "Along with the 4 modules, you leave with everything ready to execute — no need to buy anything else.",
+    bonusCta: "Get Access",
+    b1Title: "Ready-Made AI Prompts",
+    b1Body: "Ready-made prompts to create posts, Reels, captions, scripts and artwork with AI — no more staring at a blank screen.",
+    b2Title: "Free Design & AI Tools",
+    b2Body: "The best free tools to create logos, websites, carousels, posts and Reels with professional quality.",
+    b3Title: "Clear and Measurable Results",
+    b3Body: "You finish the method with a professional Instagram, strategic content and your own design — ready to attract and convert.",
+    b4Title: "7-Day Guarantee",
+    b4Body: "Apply the method. If within 7 days you don\'t see clarity and progress in your digital presence, we refund your access. No questions asked.",
+    bannerWord1: "Presence", bannerWord3: "intention",
+    ctaBadge: "/// Your Next Step",
+    ctaHeadingHtml: "Transform your presence.<br/>Now.",
+    ctaSub: "Professional Instagram, own design, AI content. Immediate access.",
+    ctaBtn: "I Want to Join the IMPERIVM™ Method",
+    ctaNote: "7-day guarantee • Immediate access",
+    serviceBadge: "/// Exclusive Service",
+    serviceHeadingHtml: "Prefer someone to <span style=\"color:#f97316;\">do it for you?</span>",
+    serviceBody: "Want results without learning from scratch? Our team handles your profile, strategy, design, creation and publishing. You focus on your business.",
+    sl1: "Strategy and visual identity for your niche",
+    sl2: "Creation of posts, Reels, carousels and Stories",
+    sl3: "Professional design: logo, website and artwork",
+    sl4: "Publishing, consistency and results",
+    serviceCta: "I Want a Social Media Manager",
+    serviceNote: "Support via WhatsApp · Reply within 2h",
+    managedLabel: "Managed",
+    activeLabel: "ACTIVE · GROWING · CONVERTING",
+    metricFollowers: "Followers", metricEngaj: "Engag.", metricPosts: "Posts/mo",
+    footerDesc: "Professional Instagram, design, content and AI — all in one complete method.",
+    footerCta: "Join the Method",
+    footerMethod: "Method", footerSocial: "Social",
+    fLink1: "The System", fLink2: "Modules", fLink3: "Bonuses", fLink4: "Guarantee",
+    newsletter: "Newsletter", newsletterPlaceholder: "Your email", newsletterBtn: "Subscribe",
+    footerCopy: "© 2025 IIMPERIVM. All rights reserved.",
+    footerTagline: "IMPERIVM™ Method, Powerful Digital Presence.",
+  },
+
+  es: {
+    pageTitle: "Método IMPERIVM™, Presencia Digital Poderosa",
+    navMetodo: "Método", navModulos: "Módulos", navBonus: "Bonos", navGarantia: "Garantía",
+    navCta: "Quiero Entrar",
+    heroBadge: "/// Método IMPERIVM™",
+    heroSub: "De cero a un Instagram profesional, con diseño, estrategia e IA. Todo en un método.",
+    heroOrbitLabel: "Autoridad · Posicionamiento · IA",
+    heroCta: "Quiero Entrar",
+    mq1:"Autoridad", mq2:"Posicionamiento", mq3:"Inteligencia Artificial",
+    mq4:"Crecimiento", mq5:"Presencia Digital", mq6:"Reconocimiento", mq7:"Transformación",
+    metodoBadge: "/// El Problema",
+    problemLabel: "SIN ESTRATEGIA",
+    metodoHeadline: "Tu Instagram podría estar generando clientes, oportunidades y reconocimiento ahora mismo.",
+    metodoBody: "Publicas. Lo intentas. Pero sin método, cada esfuerzo empieza desde cero. IMPERIVM™ cambia eso.",
+    metodoCta: "Ver la Solución",
+    stat1Body: "Módulos completos: perfil, diseño, contenido, IA y presencia digital.",
+    stat2Body: "Prompts listos para crear posts, Reels, textos y guiones con IA.",
+    stat3Body: "Herramientas gratuitas de diseño, edición y automatización ya incluidas.",
+    errosBadge: "/// Errores Críticos",
+    errosHeading: "4 Errores que Bloquean Tu Crecimiento",
+    errosBody: "Identifica qué está frenando tu crecimiento antes de seguir publicando.",
+    errosCta: "Evitar Ahora",
+    e1Caption: "Publicar sin Estrategia", e1CaptionSub: "El contenido aleatorio no construye audiencia.",
+    e1Title: "Publicar sin Estrategia",
+    e1Body: "Publicar sin estrategia es trabajo perdido. Cada contenido necesita un papel claro: atraer, enganchar o convertir.",
+    e1Link: "Cómo Corregir",
+    iaDashboard: "Panel de IA",
+    iaRow1: "Contenido generado con IA", iaRow2: "Tiempo de producción", iaRow3: "Consistencia de posts",
+    iaBarLabel1: "Productividad sin IA", iaBarLabel2: "Con IMPERIVM™ + IA",
+    e2Title: "Ignorar la IA",
+    e2Body: "Quien no usa IA produce menos y gasta más tiempo. IMPERIVM™ incluye todo para que crees 10× más rápido.",
+    e2Link: "Cómo Corregir",
+    pyramidLabel: "Pirámide de Autoridad",
+    pyramidLevel1: "Referencia", pyramidLevel2: "Autoridad",
+    pyramidLevel3: "Posicionamiento", pyramidLevel4: "Perfil Anónimo",
+    e3Title: "Sin Autoridad",
+    e3Body: "Los seguidores sin autoridad no se convierten en clientes. Necesitas ser reconocido como referencia, y el método enseña exactamente eso.",
+    e3Link: "Cómo Construir",
+    chartNoMethod: "Sin Método", chartWithMethod: "Con IMPERIVM™",
+    toggleEngagement: "Interacción", toggleAuthority: "Autoridad",
+    toggleOpportunities: "Oportunidades", toggleGrowth: "Crecimiento",
+    e4Title: "Crecimiento Bloqueado",
+    e4Body: "Sin los tres pilares juntos — Autoridad, Posicionamiento e IA — sigues dando vueltas mientras otros crecen.",
+    e4Link: "La Solución",
+    bannerAPI: "El Sistema API™",
+    modulosBadge: "/// Módulos",
+    modulosHeading: "Qué Vas a Aprender",
+    modulosBody: "Todo lo que necesitas para tener un Instagram profesional desde cero — diseño, contenido, IA y estructura digital.",
+    modulosCta: "Ver Todos",
+    mod1Tag: "01 · FUNDAMENTOS", mod1Title: "Fundamentos de la Presencia Digital",
+    mod1Body: "Construye un perfil que transmite credibilidad en la primera visita: bio, foto, destacados e identidad visual desde cero.",
+    visBar1: "Autoridad", visBar2: "Posición", visBar3: "Identidad",
+    mod2Tag: "02 · CONTENIDO", mod2Title: "Estrategia de Contenido",
+    mod2Body: "Crea cualquier formato: Reels, carruseles, posts, Historias y destacados, con estrategia y diseño profesional.",
+    calLabel: "Calendario",
+    fmtReels: "Reels", fmtPosts: "Posts", fmtStories: "Historias", fmtHighlights: "Destacados",
+    mod3Tag: "03 · INTELIGENCIA ARTIFICIAL", mod3Title: "IA Aplicada al Contenido",
+    mod3Body: "Usa IA para crear textos, guiones, artes y contenidos completos. Producción profesional sin agencia, sin alto costo.",
+    terminalPrompt: "Crea un texto para Reel sobre <span style=\"color:#f97316;\">autoridad</span> en el nicho digital",
+    terminalReply: "\"No necesitas más seguidores.<br>Necesitas que los correctos te <span style=\"color:#f97316;\">reconozcan</span>.\"",
+    terminalCmd: "Generar guión de 30s para Reel...",
+    promptsAvail: "101 prompts disponibles", activeStatus: "activo",
+    mod4Tag: "04 · ESTRUCTURA DIGITAL", mod4Title: "Estructura de Presencia Digital",
+    mod4Body: "Crea tu sitio web, landing page, link de bio y portafolio — todo gratis, con herramientas profesionales enseñadas en el método.",
+    nodeLanding: "Landing", nodePortfolio: "Portafolio", nodeBioLink: "Bio Link",
+    presence247: "Presencia 24/7",
+    bonusBadge: "/// Bonos Exclusivos",
+    bonusHeading: "Lo Que Recibes",
+    bonusBody: "Junto con los 4 módulos, sales con todo listo para ejecutar — sin necesitar comprar nada más.",
+    bonusCta: "Quiero Entrar",
+    b1Title: "Prompts Listos para IA",
+    b1Body: "Prompts listos para crear posts, Reels, textos, guiones y arte con IA, sin bloquearte ante la pantalla en blanco.",
+    b2Title: "Herramientas Gratuitas de Diseño e IA",
+    b2Body: "Las mejores herramientas gratuitas para crear logos, sitios, carruseles, posts y Reels con calidad profesional.",
+    b3Title: "Resultado Claro y Medible",
+    b3Body: "Sales del método con un Instagram profesional, contenido estratégico y diseño propio, listo para atraer y convertir.",
+    b4Title: "Garantía de 7 Días",
+    b4Body: "Aplica el método. Si en 7 días no ves claridad y progreso en tu presencia digital, te devolvemos el acceso. Sin preguntas.",
+    bannerWord1: "Presencia", bannerWord3: "intención",
+    ctaBadge: "/// Tu Próximo Paso",
+    ctaHeadingHtml: "Transforma tu presencia.<br/>Ahora.",
+    ctaSub: "Instagram profesional, diseño propio, contenido con IA. Acceso inmediato.",
+    ctaBtn: "Quiero Entrar al Método IMPERIVM™",
+    ctaNote: "Garantía de 7 días • Acceso inmediato",
+    serviceBadge: "/// Servicio Exclusivo",
+    serviceHeadingHtml: "¿Prefieres que <span style=\"color:#f97316;\">alguien lo haga</span><br>por ti?",
+    serviceBody: "¿Quieres resultados sin aprender desde cero? Nuestro equipo se encarga de tu perfil, estrategia, diseño, creación y publicación. Tú te enfocas en tu negocio.",
+    sl1: "Estrategia e identidad visual para tu nicho",
+    sl2: "Creación de posts, Reels, carruseles e Historias",
+    sl3: "Diseño profesional: logo, sitio y artes",
+    sl4: "Publicación, consistencia y resultados",
+    serviceCta: "Quiero un Social Media",
+    serviceNote: "Atención vía WhatsApp · Respuesta en hasta 2h",
+    managedLabel: "Gestionado",
+    activeLabel: "ACTIVO · CRECIENDO · CONVIRTIENDO",
+    metricFollowers: "Seguidores", metricEngaj: "Interac.", metricPosts: "Posts/mes",
+    footerDesc: "Instagram profesional, diseño, contenido e IA — todo en un método completo.",
+    footerCta: "Entrar al Método",
+    footerMethod: "Método", footerSocial: "Social",
+    fLink1: "El Sistema", fLink2: "Módulos", fLink3: "Bonos", fLink4: "Garantía",
+    newsletter: "Newsletter", newsletterPlaceholder: "Tu correo", newsletterBtn: "Suscribirse",
+    footerCopy: "© 2025 IIMPERIVM. Todos los derechos reservados.",
+    footerTagline: "Método IMPERIVM™, Presencia Digital Poderosa.",
+  }
+};
+
+// Keys that contain HTML and need innerHTML
+const HTML_KEYS = new Set([
+  "ctaHeadingHtml","serviceHeadingHtml","terminalPrompt","terminalReply"
+]);
+
+function detectLang() {
+  // 1. Persisted preference
+  try {
+    const stored = localStorage.getItem("imperivm_lang");
+    if (stored && I18N[stored]) return stored;
+  } catch(e) {}
+  // 2. Browser language
+  const raw = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+  if (raw.startsWith("pt")) return "pt";
+  if (raw.startsWith("es")) return "es";
+  return "en"; // default fallback
+}
+
+function applyLang(lang) {
+  const t = I18N[lang];
+  if (!t) return;
+
+  // Page meta
+  document.title = t.pageTitle;
+  document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+
+  // Standard text nodes via data-i18n
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (!t[key]) return;
+    if (HTML_KEYS.has(key)) {
+      el.innerHTML = t[key];
+    } else {
+      el.textContent = t[key];
+    }
+  });
+
+  // Special: CTA heading with innerHTML
+  const ctaH2 = document.querySelector(".cta-heading");
+  if (ctaH2) ctaH2.innerHTML = t.ctaHeadingHtml;
+
+  // Special: service heading with innerHTML
+  const svcH2 = document.querySelector(".service-heading");
+  if (svcH2) svcH2.innerHTML = t.serviceHeadingHtml;
+
+  // Input placeholders via data-i18n-placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (t[key]) el.placeholder = t[key];
+  });
+
+  // card-link: update text, preserve static arrow HTML
+  const cardLinkKeys = ["e1Link","e2Link","e3Link","e4Link"];
+  const cardLinks = document.querySelectorAll(".card-link");
+  const ARROW_HTML = '<iconify-icon icon="solar:arrow-right-linear"></iconify-icon>';
+  cardLinkKeys.forEach((key, idx) => {
+    if (cardLinks[idx] && t[key]) {
+      cardLinks[idx].innerHTML = t[key] + " " + ARROW_HTML;
+    }
+  });
+
+  // Update lang switcher button states
+  ["pt","en","es"].forEach(l => {
+    const btn = document.getElementById("lang-btn-" + l);
+    if (!btn) return;
+    if (l === lang) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+}
+
+function setLang(lang) {
+  try { localStorage.setItem("imperivm_lang", lang); } catch(e) {}
+  applyLang(lang);
+}
+
+// ── Auto-init: run BEFORE DOMContentLoaded if possible ──
+(function init() {
+  function run() { applyLang(detectLang()); }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
+})();
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.remove("reveal-hidden");
+            entry.target.classList.add("animate-in");
+          }, index * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll("h1, h2, h3, p, .btn-wrap, .process-row, .module-row, .card, .stat-box, .service-list, .service-visual").forEach(el => {
+      if (!el.closest(".animate-marquee")) {
+        el.classList.add("reveal-hidden");
+        observer.observe(el);
+      }
+    });
+
+    // Show hero CTA on desktop
+    if (window.innerWidth >= 768) {
+      document.getElementById('hero-cta-wrap').style.display = 'flex';
+    }
+
+    // Fix mobile: override inline styles that CSS can't fully beat
+    if (window.innerWidth < 768) {
+      // stats grid
+      document.querySelectorAll('.stats-3col').forEach(el => {
+        el.style.setProperty('grid-template-columns', '1fr', 'important');
+        el.style.setProperty('display', 'grid', 'important');
+        el.style.setProperty('width', '100%', 'important');
+      });
+      // inline paddings that cause overflow
+      document.querySelectorAll('[style*="64px"]').forEach(el => {
+        el.style.paddingLeft  = '20px';
+        el.style.paddingRight = '20px';
+      });
+    }
+
+    // Wire up animate-wireframe delays
+    document.querySelectorAll('[data-delay]').forEach(el => {
+      el.style.animationDelay = el.dataset.delay + 'ms';
+    });
+
+    // ── CountUp on scroll ──────────────────────────
+    const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+
+    function animateCount(el) {
+      const target   = parseInt(el.dataset.target, 10);
+      const prefix   = el.dataset.prefix  || '';
+      const suffix   = el.dataset.suffix  || '';
+      const duration = parseInt(el.dataset.duration, 10) || (target > 50 ? 1800 : 1200);
+      const start    = performance.now();
+
+      function step(now) {
+        const elapsed  = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased    = easeOutQuart(progress);
+        const current  = Math.round(eased * target);
+        el.textContent = prefix + current + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + target + suffix; // lock on final value
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+      countObserver.observe(el);
+    });
+    // ──────────────────────────────────────────────
+    // mark scroll containers passive
+    document.addEventListener('scroll', ()=>{}, {passive:true});
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id === '#') return;
+        if (id === '#hero') { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); return; }
+        const target = document.querySelector(id);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Stagger banner words when they enter viewport
+    const bannerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const words = entry.target.querySelectorAll('.banner-word-1,.banner-word-2,.banner-word-3');
+          words.forEach((w, i) => {
+            setTimeout(() => {
+              w.style.animation = 'fadeInUpBlur 0.7s cubic-bezier(0.2,0.8,0.2,1) both';
+            }, i * 130);
+          });
+          bannerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('#presenca .banner-heading').forEach(el => bannerObserver.observe(el));
+  });
+</script>
+</body>
+</html>
